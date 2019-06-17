@@ -1,0 +1,165 @@
+.helpCon{
+  width:100%;
+  font-size: 62.5%;
+background-color: #f7f7f7;
+}
+.title{
+  width:97.5%;
+  font-size: 1.2em; 
+  font-weight: bold;
+  color:#262626;
+  padding-left: 2.5%;
+  display: block;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  letter-spacing: 1px;
+  background-color: white;
+}
+.content{
+  display: block;
+  width:97.5%;
+  padding-left: 2.5%;
+  font-size: 1.1em;
+  color:#4D4D4D;
+  font-weight: bold;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+   background-color: white;
+   letter-spacing: 1px;
+}
+.people{
+  width:97.5%;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+   background-color: white;
+   padding-top: 20rpx;
+   padding-bottom: 20rpx;
+}
+.people image{
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+}
+.people text{
+  line-height: 30px;
+  font-weight: bold;
+}
+.name{
+  margin-left: 2%;
+  color:#4D4D4D;
+  letter-spacing: 1rpx;
+}
+.time{
+  margin-left: 4%;
+display: block;
+width:48%;
+color:#808080;
+}
+.num{
+  color:#86C166;
+}
+.pl{
+  margin-top: 20rpx;
+  font-size: 1.3em;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.xh{
+  width:97.5%;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1px solid #cccccc;
+  background-color: white;
+}
+.one{
+width:100%;
+display: flex;
+flex-direction: row;
+padding-top: 15rpx;
+padding-bottom: 15rpx;
+}
+.one image{
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+}
+.one text{
+  line-height: 30px;
+  font-weight: bold;  
+  color:#262626;
+  margin-left: 1%;
+  font-size: 1.2em;
+}
+.plContent{
+  display: block;
+  width:97.5%;
+  padding-left: 2.5%;
+  font-size: 1.2em;
+  color:#4D4D4D;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+   background-color: white;
+   letter-spacing: 1rpx;
+}
+.plTime{
+  color:#808080;
+  font-weight: bold;
+}
+
+.write{
+  width:100%;
+  height:80rpx;
+  background-color: white;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  position: fixed;
+  bottom: 0;
+  opacity: 0.8;
+}
+.write input{
+  width:86%;
+  height:70rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 15px;
+  background-color: rgb(204, 204, 204);
+  margin-left: 5%;
+margin-top: 5rpx;
+text-align: center;
+color:#808080;
+font-weight: bold;
+}
+.cz{
+  width:35%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right:0;
+  padding-top: 5rpx;
+}
+.bj{
+  width:50%;
+  display: flex;
+  flex-direction: row;
+}
+.bj image{
+  width:50rpx;
+  height:50rpx;
+}
+.bj text{
+  color:#4DA4ED;
+  margin-left: 1%;
+}
+.timeTwo{
+  width:25%;
+}
+.scImg{
+  width:40rpx !important;
+  height:40rpx !important;
+  margin-top: 5rpx;
+}

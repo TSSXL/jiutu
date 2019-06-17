@@ -1,0 +1,182 @@
+<view class='con'>
+
+<view class='info'>
+<view class='first'>
+<text>收货人：{{peopleInfo.Name}}</text>
+<text class='phone'>{{peopleInfo.Phone}}</text>
+</view>
+<view class='second'>
+<image class='leftImg' src="../../image/icon_address@3x.png" bindtap='gotoAddress'></image>
+<image class='rightImg' src="../../image/enter_arrow@3x.png" bindtap='gotoAddress'></image>
+</view>
+<view class='add'>
+收货地址：{{peopleInfo.Province}}{{peopleInfo.City}}{{peopleInfo.Region}}{{peopleInfo.Address}}
+</view>
+<image class='botImg' src="../../image/border@3x.png"></image>
+</view>
+
+
+
+<view class='content'>
+
+<block wx:for="{{info.ShopsProducts}}" wx:for-item="i" wx:key="i.BuinessID" wx:for-index="index">
+<view class='shopName'>
+{{i.BuinessName}}
+</view>
+<block wx:for="{{i.Products}}" wx:for-item="j" wx:key="j.ID">
+<view class='one'>
+<view class='pro'>
+<image src="{{j.Image}}"></image>
+<view class='size'>
+<text class='a'>{{j.Name}}</text>
+<text class='b'>{{j.Spec}}</text>
+</view>
+<view class='num'>
+<text class='price'>￥{{j.Price}}</text>
+<text class='n'>x{{j.Quantity}}</text>
+</view>
+</view>
+</view>
+</block>
+<view class='bz'>
+<view class='gd'>备注:</view>
+<input placeholder='选填' data-index='{{index}}' data-type="0" data-id="{{i.BuinessID}}" bindinput='writeBz' ></input>
+</view>
+<view class='xj'>
+{{i.Subtotal}}
+</view>
+
+<view class='use'>
+<text>索要发票</text>
+<image src="../../image/set_default@3x.png"  data-index="{{index}}"     bindtap='choseFp' wx:if="{{flag[index]}}"></image>
+ <image src="../../image/not_set_default@3x.png" data-index="{{index}}"    bindtap='choseFpNo' wx:else > </image>
+</view>
+
+<view class='use ut' wx:if="{{flag[index]}}">
+<text>发票类型</text>
+<view class='lx'>
+<text >{{flagV[index]}}</text>
+ <image src="../../image/down_arrow@2x.png" data-index="{{index}}"   bindtap='chose' ></image>
+</view>
+<view class='xl' wx:if="{{flagT[index]}}">
+ <text data-index="{{index}}" data-type="2" bindtap='choseQy'>{{qy}}</text>
+ <text data-index="{{index}}" data-type="2"  bindtap='choseGr'>{{gr}}</text>
+</view>
+</view>
+
+<view wx:if="{{flag[index]}}">
+<view class='use ut' >
+<text>名称</text>
+<input placeholder='请输入抬头名称' data-index='{{index}}' bindinput='writeName' ></input>
+</view>
+
+<view class='use ut' wx:if="{{flagNum[index]}}" >
+<text>税号</text>
+<input placeholder='请输入纳税人识别号' data-index='{{index}}' bindinput='writeNum'></input>
+</view>
+
+</view>
+
+
+</block>
+</view>
+
+
+
+
+<view class='use'>
+<text>使用余额抵扣</text>
+<text class='ye'>(￥{{info.Balance}}可用)</text>
+<image src="../../image/set_default@3x.png" wx:if="{{isUseYe}}"  bindtap='choseBalance'></image>
+<image src="../../image/not_set_default@3x.png" bindtap='choseBalance' wx:else></image>
+</view>
+
+
+
+<view class='last'>
+<view class='lastItem'>
+<text>商品金额</text>
+<text class='rightText'>￥{{info.ProductTotal}}</text> 
+</view>
+<view class='lastItem'>
+<text>运费</text> 
+<text class='rightText'>+￥{{info.PostageTotal}}</text> 
+</view>
+<view class='lastItem'>
+<text>余额</text>
+<text class='rightText'>-￥{{info.Balance}}</text> 
+</view>
+</view>
+
+<view class='foot'>
+<text class='sf'>实付金额：</text>
+<text class='sfT'>￥{{info.ProductTotal+info.PostageTotal}}</text>
+<button class='tj' bindtap='createOrder'>提交订单</button>
+</view>
+
+
+
+<modal class="modal" hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消" bindcancel="close" bindconfirm="modalChange">
+<view class='psd' wx:if="{{info.IsPayPasswordSeted}}">
+  <text class='title' wx:if="{{info.IsPayPasswordSeted}}">支付</text>
+  <text class='title' wx:else>设置支付密码</text>
+  <view class='numT'>
+     <input class='numItem' value="{{one}}" maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' value="{{two}}" maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' value="{{three}}" maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' value="{{four}}" maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' value="{{five}}" maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' value="{{six}}" maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+ <text class='for' wx:if="{{info.IsPayPasswordSeted}}" bindtap='showFor'>忘记密码</text>
+</view>
+
+ <view class='xg' wx:else>
+  <text class='a'>验证码</text>
+  <view class='y'>
+  <input class='yzm' placeholder='请输入收到的验证码' bindinput='gety' ></input>
+  <view class='getYzm' bindtap='getYzm'>获取</view>
+  </view>
+  <view class='new'>
+  <text class='a'>新密码</text>
+  <view class='numT numth'>
+       <input class='numItem' value="{{one}}" maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' value="{{two}}" maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' value="{{three}}" maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' value="{{four}}" maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' value="{{five}}" maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' value="{{six}}" maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+  </view>
+  </view>
+
+</modal>
+
+
+<modal class="modal" hidden="{{modalHiddenT}}" confirm-text="确定" cancel-text="取消" bindcancel="closeT" bindconfirm="modalChange">
+<view class='psd'>
+  <text class='title' >忘记密码</text>
+</view>
+
+ <view class='xg'>
+  <text class='a'>验证码</text>
+  <view class='y'>
+  <input class='yzm' placeholder='请输入收到的验证码' bindinput='gety' ></input>
+  <view class='getYzm' bindtap='getYzm'>获取</view>
+  </view>
+  <view class='new'>
+  <text class='a'>新密码</text>
+  <view class='numT numth'>
+ <input class='numItem' value="{{one}}" maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' value="{{two}}" maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' value="{{three}}" maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' value="{{four}}" maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' value="{{five}}" maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' value="{{six}}" maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+  </view>
+  </view>
+
+</modal>
+
+</view>

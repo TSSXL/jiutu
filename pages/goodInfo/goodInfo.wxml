@@ -1,0 +1,154 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='goodInfo'>
+<view class='img' wx:if="{{!isShowVideo}}">
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{goodsInfo.ProductImg}}" wx:key="item" wx:for-index="index">
+    <swiper-item>
+      <image class='swiperImage' src="{{item.Image}}" />
+      <image class='playImg' src="../../image/play.jpg" wx:if="{{item.Type==0}}" bindtap='showVideo'></image>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+      <video  src="{{videoSrc}}" autoplay='true'  wx:if="{{isShowVideo}}" bindtap='showImg'></video>
+
+<image class='rightImg' src="../../image/seven_days.png"></image>
+<view class='info'>
+<view class='one'>{{goodsInfo.Name}}</view>
+<view class='two'>
+<view class='twoLeft'>￥{{goodsInfo.Price}}</view>
+<view class='twoRight'>
+<text>{{goodsInfo.Point}}</text>
+<image src='../../image/jiutu_points@2x.png'></image>
+<text class='shareGet'>分享得:{{goodsInfo.SharePoiint}}</text>
+</view>
+</view>
+<view class='three'>
+<text>库存:{{goodsInfo.Stock}}</text>
+<text class='poster'>邮费:{{goodsInfo.Postage}}元</text>
+<text class='last'>总销售: {{goodsInfo.SalesVolume}} 笔</text>
+</view>
+</view>
+<view class='size'>
+<text>常规　{{cProduct.Describe}}</text>
+<image src="../../image/goods_details_specifications@2x.png" bindtap='selectSize'></image>
+</view>
+<view class='tabText'>
+<text bindtap='showGoods' style="color:{{a}}">商品详情</text>
+<text bindtap='showPl' style="color:{{b}}">评论详情</text>
+<text bindtap='showShop' style="color:{{c}}">店铺信息</text>
+</view>
+<view class='xq' wx:if="{{dialog==0}}">
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+</view>
+
+<view class='pj' wx:elif="{{dialog==1}}">
+<block wx:for="{{comment}}" wx:key="item.Image">
+<view class='pjItem'>
+
+<view class='pjOne'>
+<image src="{{item.Image}}"></image>
+<text>{{item.NickName}}</text>
+
+<view class='star'>
+<block wx:for="{{item.Star-0}}" wx:key="item">
+<image src="../../image/star_selected@3x.png"></image>
+</block>
+</view>
+
+
+</view>
+
+<text class='pjTwo'>{{item.CommentContent}}</text>
+
+<view class='pjThree'>
+<block wx:for="{{item.CommentImages}}" wx:for-item="j" wx:key="j">
+<image src="{{j}}"></image>
+</block>
+</view>
+
+</view>
+</block>
+
+</view>
+
+<view class='shopInfo'  wx:else="{{dialog==2}}">
+<image src="{{goodsInfo.Business.BuinessImage}}"></image>
+<view class='shopText'>
+<text class='shopName'>{{goodsInfo.Business.BuinessName}}</text>
+<text class='shopPhone'> 管家电话：{{goodsInfo.Business.Phone}}</text>
+</view>
+</view>
+
+<!-- 底部导航栏 -->
+<view class='foot'>
+<!-- <view class='footItem' bindtap='gotoKf'>
+<image src="../../image/goods_details_customer_service@2x.png"></image>
+<text>客服</text>
+</view> -->
+<view class='footItem' bindtap='gotoShop'>
+<image src="../../image/goods_details_store@2x.png"></image>
+<text>店铺</text>
+</view>
+<view class='footItem'>
+<image src="../../image/goods_details_collection@2x.png" wx:if="{{isShow}}" bindtap='handleSc'></image>
+<image src="../../image/goods_details_collection_selected@2x.png" bindtap='handleScNo' wx:else></image>
+<text wx:if="{{isShow}}">收藏</text>
+<text wx:else>已收藏</text>
+</view>
+<view class='footItem' bindtap='gotoCar'>
+<view class='numCl'>
+<image src="../../image/goods_details_shopping_cart@2x.png"></image>
+<text wx:if="{{num!==0}}">{{num}}</text>
+</view>
+<text>购物车</text>
+</view>
+<view class='adda' bindtap='addCar'>
+加入购物车
+</view>
+</view>
+
+<!-- 商品规格 -->
+<view class='chose' style='display:{{size}}'>
+<image src="../../image/c.png" class='close' bindtap='close'></image>
+ <view class='sImg'>
+ <image class='b' src='{{cProduct.Image}}'></image>
+ <view class='twoPri'>
+ <text style='color:#F17D23;font-weight:bolder;'>￥{{cProduct.Price}}</text>
+ <text style='margin-top:20rpx;color:#808080;font-size:1em;'>库存:{{cProduct.Stock}}</text>
+ </view>
+ <view class='d'>
+<text>{{cProduct.Point}}</text>
+<image src='../../image/jiutu_points@2x.png'></image>
+ </view>
+ </view>
+
+<view class='xh'>
+<text class='xhName'>{{goodsInfo.Unit}}</text>
+ <view class='cg'>
+ <block wx:for="{{goodsInfo.Specs2}}" wx:for-item="i" wx:for-index="idx" wx:key="{{i.Describe}}"> 
+  <text class='cgName' data-idx="{{idx}}" bindtap='changeColor' style="color:{{num===idx?'red !important':''}}">{{i.Describe}}</text>
+    </block>
+ </view>
+</view>
+
+<view class='xh gg'>
+<text class='xhName'>{{goodsInfo.Unit2}}</text>
+ <view class='cg'>
+ <block wx:for="{{goodsInfo.Specs2[num].SonSpecs}}" wx:for-item="j" wx:for-index="index" wx:key="{{j.Describe}}">
+  <text class='cgName'   data-id="{{j.ID}}" data-index="{{index}}" style="color:{{select===index?'red !important':''}}" bindtap='choseProduct'>{{j.Describe}}</text>
+    </block>
+ </view>
+</view>
+<view class='addCar' bindtap='addCarT'>
+加入购物车
+</view>
+</view>
+
+</view>

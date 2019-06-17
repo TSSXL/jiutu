@@ -1,0 +1,78 @@
+<view class='myAllOrderCon'>
+<view class='tab'>
+<block wx:for="{{textList}}" wx:key="item" wx:for-index="index">
+<text style="color:{{select===index?'#86C166':''}}" data-index="{{index}}" bindtap='change'>{{item}}</text>
+</block>
+</view>
+
+<!-- 订单循环 -->
+<block wx:for="{{orderInfo}}" wx:for-item="i" wx:key="i.OrderID">
+<view class='item' > 
+<view class='itemOne' data-id="{{i.OrderID}}" bindtap='gotoOrderInfo'>
+<text>{{i.Name}}</text>
+<text class='num'>订单号：{{i.OrderID}}</text>
+</view>
+<!-- 商品循环 -->
+<block wx:for="{{i.Products}}" wx:for-item="j" wx:key="j.ID">
+<view class='products' >
+ <image src="{{j.Image}}"></image>
+ <view class='name'>
+ <text class='nameOne'>{{j.Name}}</text>
+ <text class='nameTwo'>{{j.Describe}}</text>
+ </view>
+ <view class='right'>
+ <text class='rightOne'>￥{{j.Price}}</text>
+ <text class='rightTwo'>x{{j.Quantity}}</text>
+ </view>
+</view>
+</block>
+<view class='allMoney'>
+<text class='yf'>（含运费：￥{{i.Postage}}）</text>
+<text>总计：￥{{i.PriceTotal}}</text>
+</view>
+<view class='time'>
+<text class='a'>{{i.PayTime}}</text>
+ <view class='allBtn' wx:if="{{i.Type===0}}">
+ <text class='qx' data-id="{{i.OrderID}}" bindtap='cancelOrder'>取消订单</text>
+ <text class='fk' data-id="{{i.OrderID}}" bindtap='giveMoney'>付款</text>
+ </view>
+ <text class='cd' wx:if="{{i.Type===1}}" data-id="{{i.OrderID}}" bindtap='remindOrder' >催单</text>
+    <view class='allBtn' wx:if="{{i.Type===2}}">
+ <text class='qx' data-orderid="{{i.OrderID}}" bindtap='gotoWl'>物流跟踪</text>
+ <text class='fk'  bindtap='confirm'>确认收货</text>
+ </view>
+  <modal hidden="{{hidden}}" title="是否确认收货" data-orderid="{{i.OrderID}}" confirm-text="是" cancel-text="否" bindcancel="cancel" bindconfirm="confirmOrder" >
+确认收货后7天内，商品存在问题还可以发起退款
+</modal>
+
+    <view class='allBtn' wx:if="{{i.Type===3}}">
+ <text class='qx' data-orderid="{{i.OrderID}}" bindtap='gotoWl'>物流跟踪</text>
+ <text class='fk' data-orderid="{{i.OrderID}}" bindtap='gotoPj'>评价</text>
+ </view>
+  <text class='cd' wx:if="{{i.Type===4}}">交易已完成</text>
+  <text class='cd' wx:if="{{i.Type===5}}">订单已超时</text>
+</view>
+</view>
+</block>
+
+
+</view>
+ <modal class="modal" hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消" bindcancel="close" bindconfirm="modalChange">
+<view class='psd'>
+  <text class='title'>支付</text>
+  <view class='numT'>
+    <input class='numItem' value="{{one}}" maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' value="{{two}}" maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' value="{{three}}" maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' value="{{four}}" maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' value="{{five}}" maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' value="{{six}}" maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+</view>
+</modal>
+
+<view class='myAllOrderCon' wx:if="{{orderInfo.length===0}}"  style="padding-bottom:{{orderInfo.length===0?'400rpx':''}}" >
+<image class='noCon' src="../../image/empty_orders@3x.png"></image>
+</view> 
+
+

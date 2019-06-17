@@ -1,0 +1,20 @@
+<view class='realCon'>
+<text class='ts'>请从相册中选择您的第二代身份证原件,请确保图片清晰,四角完整</text>
+<view class='info'>
+<text>身份证正面</text>
+<image src="{{srcOne}}" bindtap='showOne'></image>
+</view>
+<view class='info'>
+<text>身份证反面</text>
+<image src="{{srcTwo}}" bindtap='showTwo'></image>
+</view>
+
+
+
+
+<view class='confirm' bindtap='confirm'>
+确定
+</view>
+
+
+</view>

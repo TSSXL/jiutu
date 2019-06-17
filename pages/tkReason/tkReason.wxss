@@ -1,0 +1,149 @@
+.con{
+  width:100%;
+background-color: #f7f7f7;
+font-size: 62.5%;
+}
+.one{
+  width:97.5%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 2.5%;
+  background-color: white;
+}
+.title{
+  font-size: 1.2em;
+  font-weight: bold;
+  color:#262626;
+  letter-spacing: 2px;
+}
+.two{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.two image{
+  height:160rpx;
+  width:160rpx;
+  border: 1px solid #cccccc;
+}
+.ce{
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+.name{
+font-weight: bold;
+letter-spacing: 2px;
+color:#262626;
+}
+.size{
+  font-size: 1.15em;
+  font-weight: bold;
+  color:#808080;
+  margin-top: 20rpx;
+}
+.item{
+width:97.5%;
+padding-left: 2.5%;
+background-color: white;
+margin-top: 20rpx;
+padding-top: 20rpx;
+padding-bottom: 20rpx;
+height:80rpx;
+display: flex;
+flex-direction: row;
+position: relative;
+}
+.leftText{
+  display: block;
+  height:100%;
+  line-height: 40px;
+  font-size: 1.2em;
+  color:#333333;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.picker{
+  height:100%;
+  position: absolute;
+  right:2.5%;
+  line-height: 40px;
+  color:#808080;
+}
+.item input{
+   width:20%;
+   height:66%;
+   line-height: 40px;
+   position: absolute;
+   right:2.5%;
+   text-align: right;
+   color:#808080;
+}
+.h{
+    width:20%;
+   height:66%;
+   line-height: 40px;
+   position: absolute;
+   right:2.5%;
+   text-align: right;
+   color:#808080;
+}
+textarea{
+  width:95%;
+  margin-left: 4%;
+  height:140rpx;
+  font-size: 1.2em;
+}
+.upload{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  background-color: white;
+}
+.first{
+  width:97.5%;
+  padding-left: 2.5%;
+ padding-top: 20rpx;
+ padding-bottom: 20rpx;
+ height:80rpx;
+ display: flex;
+ flex-direction: row;
+ position: relative;
+}
+.uploadImg{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
+}
+.uploadImg image{
+  width:22%;
+  height:160rpx;
+  margin-left: 2.4%;
+}
+.xz{
+  position: absolute;
+right:2.5%;
+display:block;
+height:100%;
+line-height: 40px;
+}
+.btn{
+  width:100%;
+  bottom: 0;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: #F17D23;
+  color:white;
+  font-size: 1.3em;
+  text-align: center;
+  left: 0;
+}

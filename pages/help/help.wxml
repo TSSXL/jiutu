@@ -1,0 +1,50 @@
+<view class='helpCon'>
+<text class='title'>{{info.Detail.Title}}</text>
+<text class='content'>　　{{info.Detail.Content}}</text>
+
+
+<view class='people' wx:if="{{type!=0}}">
+ <image src="{{info.Detail.Avatar}}"></image>
+ <text class='name'>{{info.Detail.NickName}}</text>
+ <text class='time'>{{info.Detail.CreateTime}}</text>
+<image  src="../../image/icon_comments@3x.png"></image>
+<text class='num'>{{info.Detail.Count}}</text>
+</view>
+
+<view class='people' wx:if="{{type==0}}">
+ <image src="{{info.Detail.Avatar}}"></image>
+ <text class='name'>{{info.Detail.NickName}}</text>
+ <text class='time timeTwo'>{{info.Detail.CreateTime}}</text>
+ 
+  <view class='cz'>
+ <view class='bj'>
+ <image src="../../image/bj.svg"></image>
+ <text bindtap='gotoBj'>编辑</text>
+ </view>
+  <view class='bj'>
+ <image class='scImg' src="../../image/sc.svg"></image>
+ <text data-id="{{info.Detail.ID}}" bindtap='deleteQz'>删除</text>
+ </view>
+ </view>
+ 
+</view>
+
+
+
+<text class='title pl'>评论</text>
+<block wx:for="{{info.Comments}}" wx:key="item.CommentID">
+<view class='xh'>
+<view class='one'>
+<image src="{{item.Avatar}}"></image>
+<text>{{item.NickName}}</text>
+</view>
+<text class='plContent'>　{{item.Content}}</text>
+<text class='plTime'>{{item.CreateTime}}</text>
+</view>
+</block>
+
+<view class='write'>
+ <input placeholder='写评论' bindconfirm="write"></input>
+</view>
+
+</view>

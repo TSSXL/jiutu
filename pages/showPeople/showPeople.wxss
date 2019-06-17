@@ -1,0 +1,44 @@
+.peopleInfo{
+  width:100%;
+  background-color: #f7f7f7;
+  font-size: 62.5%;
+}
+.item{
+  width:100%;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #CCCCCC;
+  position: relative;
+  background-color: white;
+}
+.item image{
+  height:160rpx;
+  width:160rpx;
+  border-radius: 50%;
+  margin-left: 2.5%;
+}
+.item text{
+  display: block;
+  height:100%;
+  line-height: 80px;
+  font-weight: bold;
+  color:#4D4D4D;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  margin-left: 1%;
+}
+.right{
+  position: absolute;
+  right:3%;
+}
+.no{
+  width:100%;
+  font-size: 1.5em;
+  color:#4D4D4D;
+  font-weight: bold;
+  position: absolute;
+  margin: 400rpx auto;
+  text-align: center;
+}

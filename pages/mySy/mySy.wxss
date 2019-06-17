@@ -1,0 +1,110 @@
+.syCon{
+  width:100%;
+font-size: 62.5%;
+}
+.tab{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+    height:60rpx;
+    padding-top: 20rpx;
+}
+.tab text{
+  width:50%;
+  height:100%;
+  line-height: 30px;
+  color:#262626;
+  text-align: center;
+  letter-spacing: 3rpx;
+}
+.header{
+  width:100%;
+ height:160rpx;
+  display: flex;
+  flex-direction: column;
+   border-bottom: 2px solid #86C166;
+   position: relative;
+}
+.header image{
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+.header text{
+  display: block;
+  width:100%;
+  line-height: 20px;
+  text-align: center;
+  font-size: 1.15em;
+  color:#86C166;
+  font-weight: bold;
+  letter-spacing: 3rpx;
+  z-index: 999;
+}
+.one{
+  width:97.5%;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 30rpx;
+  height:160rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.left{
+width:67%;
+height:100%;
+display: flex;
+flex-direction: column;
+}
+.name{
+    color:#262626;
+  letter-spacing: 2px;
+  font-weight: bold;
+  overflow:hidden;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-line-clamp:1;
+-webkit-box-orient:vertical;
+}
+.sz{
+  color:#808080;
+  font-weight: bold;
+  margin-top: 15rpx;
+  letter-spacing: 1px;
+}
+.right{
+  width:25%;
+  height:100%;
+  display: flex;
+  flex-direction:column;
+  position: relative;
+}
+.money{
+  font-size: 1.3em;
+  color:#262626;
+  font-weight: bold;
+  text-align: right;
+}
+.a{
+width:100%;
+height:45%;
+display: flex;
+flex-direction: row;
+position: absolute;
+bottom: 20rpx;
+margin-left: 10%;
+justify-content: center;
+}
+.a image{
+  height:70rpx;
+  width:70rpx;
+}
+.a text{
+  color:#FF5F5F;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 35px;
+}
+.firstText{
+  margin-top: 50rpx;
+}

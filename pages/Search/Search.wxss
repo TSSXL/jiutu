@@ -1,0 +1,163 @@
+.search{
+  width:100%;
+  font-size: 62.5%;
+  background-color: rgba(218, 204, 204, 0.493);
+}
+.head{
+  width:100%;
+  background-color: #86C166;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20rpx;
+}
+.head input{
+  width:75%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  height:70rpx;
+  background-color: rgba(255, 255, 255, 0.849);
+  color:#808080;
+}
+.rightImg{
+  height:70rpx;
+  width:70rpx;
+  position: absolute;
+  right:8%;
+}
+.leftImg{
+  height:70rpx;
+  width:70rpx;
+}
+.his{
+  width:100%;
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: row;
+  height:100rpx;
+}
+.his text{
+  font-size: 1.2em;
+  color:#808080;
+  line-height: 50px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.left{
+  margin-left: 5%;
+}
+.right{
+  position: absolute;
+  right:5%;
+}
+.con{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rpx;
+}
+.item{
+  font-size: 1.1em;
+  color:#4D4D4D;
+  margin-top: 3rpx;
+  width:100%;
+  height:100rpx;
+  background-color: #ffffff;
+  line-height: 50px;
+  text-indent: 5%;
+}
+
+.headT{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  height:100rpx;
+ border-bottom: 1px solid #CCCCCC;
+ background-color: white;
+}
+.headT text{
+  line-height: 100rpx;
+}
+.t{
+  width:25%;
+  text-align: center;
+}
+.s{
+  color:#CCCCCC;
+}
+.price image{
+ width:50rpx;
+height:50rpx;
+position:absolute;
+margin-top:25rpx;
+}
+.p{
+  margin-left: -1rem;
+}
+.main{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.mainItem{
+  width:100%;
+  height:6rem;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #e6e6e6;
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+  background-color: white;
+}
+.firstImg{
+  height:100%;
+  width:230rpx;
+  margin-left: 5%;
+  border: 1px solid #e6e6e6;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  width:44%;
+  height:100%;
+  margin-left: 4%;
+  padding-bottom: 30rpx;
+}
+.ti{
+   height:80px;
+  color:#262626;
+  font-size: 1.1em;
+  overflow:hidden;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-line-clamp:3;
+-webkit-box-orient:vertical;
+}
+.m{
+  font-size: 1.2em;
+  color:#FF5555;
+  margin-top: 25rpx;
+  font-weight: bold;
+}
+.pr{
+  color:#808080;
+  margin-top: 25rpx;
+}
+.xl{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right:4%;
+  margin-top: 80rpx;
+}
+.xl image{
+  height:45rpx;
+  width:45rpx;
+  margin-right: 5rpx;
+}
+.xl text{
+  color:#FF5555;
+  font-weight: bolder;
+  font-size: 1.2em;
+  margin-top: 5rpx;
+}

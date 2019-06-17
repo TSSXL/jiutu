@@ -1,0 +1,101 @@
+<view class='zhManage'>
+<view class='img' bindtap='uploadImg'>
+<text class='leftText'>头像</text>
+<view class='right'>
+<image src="{{info.Image}}"></image>
+<text>></text>
+</view>
+</view>
+<view class='vipName' bindtap='showName'>
+<text class='vipTitle'>会员名</text>
+<view class='vipRight'>
+<text class='realName'>{{info.NickName}}</text>
+<text>></text>
+</view>
+</view>
+
+<view class='vipName t' bindtap='gotoReal' wx:if="{{info.IsVerifiedIdentity==false}}">
+<text class='vipTitle'>实名认证</text>
+<view class='vipRight'>
+<text class='realName'>{{info.RealName}}</text>
+<text>></text>
+</view>
+</view>
+
+<view class='vipName t' wx:if="{{info.IsVerifiedIdentity==true}}">
+<text class='vipTitle'>实名认证</text>
+<view class='vipRight'>
+<text class='realName'>{{info.RealName}}</text>
+</view>
+</view>
+
+
+
+
+<view class='vipName' bindtap='showDialog'>
+<text class='vipTitle' wx:if="{{!info.IsPayPasswordSeted}}" >设置支付密码</text>
+<text class='vipTitle' wx:else>修改支付密码</text>
+<view class='vipRight'>
+<text class='zf him'>></text>
+</view>
+</view>
+
+<view class='vipName t' bindtap='showNum'>
+<text class='vipTitle'>推广人创业码</text>
+<view class='vipRight'>
+<text class='zf him'>></text>
+</view>
+
+
+</view>
+
+<view class='Logout' bindtap='logout'>
+退出登录
+</view>
+
+<view class='psd' wx:if="{{isShow}}" style="height:{{info.IsPayPasswordSeted===true?'600rpx':''}}">
+  <text class='title' wx:if="{{!info.IsPayPasswordSeted}}">设置支付密码</text>
+  <text class='title' wx:if="{{info.IsPayPasswordSeted}}">修改支付密码</text>
+  <view class='num' wx:if="{{!info.IsPayPasswordSeted}}">
+    <input class='numItem' maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+
+  <view class='xg' wx:if="{{info.IsPayPasswordSeted}}">
+  <text class='a'>验证码</text>
+  <view class='y'>
+  <input class='yzm' placeholder='请输入收到的验证码' bindinput='gety' focus='true' ></input>
+  <view class='getYzm' bindtap='getYzm'>获取</view>
+  </view>
+  <view class='new'>
+  <text class='a'>新密码</text>
+  <view class='num numT'>
+    <input class='numItem' maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+  </view>
+  </view>
+  <view class='foot'>
+  <text  bindtap='close'>取消</text>
+    <text style='color:#86C166'  bindtap='confirm'>确定</text>
+  </view>
+</view>
+<modal  hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消" bindcancel="closeNum" bindconfirm="confirmNum">
+<input style="text-align:center" placeholder='请输入推广码' value="{{inviteCode}}" bindinput='getInvite'></input>
+</modal>
+
+<modal  hidden="{{modalHiddenName}}" confirm-text="确定" cancel-text="取消" bindcancel="closeName" bindconfirm="confirmName">
+<input style="text-align:center" placeholder='您只有一次修改昵称的机会' value="{{peopleName}}" bindinput='getName'></input>
+</modal>
+<!-- 遮罩层 -->
+<view class='noCon' wx:if="{{isShow}}"></view>
+</view>
+

@@ -1,0 +1,12 @@
+<view class='mx'>
+<block wx:for="{{list}}" wx:key="item.Money">
+<view class='info'>
+<view class='left'>
+<text class='name'>{{item.Title}}</text>
+<text class='time'>{{item.CreateTime}}</text>
+</view>
+<text class='money'>{{item.Money}}</text>
+</view>
+</block>
+
+</view>

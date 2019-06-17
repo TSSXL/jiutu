@@ -1,0 +1,39 @@
+.mx{
+  width:100%;
+  font-size: 62.5%;
+}
+.info{
+  padding-top: 30rpx;
+  padding-bottom: 40rpx;
+  width:97.5%;
+  padding-left: 2.5%;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  width:70%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+.left text{
+  font-weight: bold;
+  line-height: 25px;
+}
+.name{
+  color:#262626;
+  letter-spacing: 2px;
+}
+.time{
+  color:#808080;
+  letter-spacing: 2px;
+  margin-top: 10rpx;
+}
+.money{
+  line-height: 45px;
+  font-weight: bold;
+  color:#86C166;
+  position: absolute;
+  right:2.5%;
+}

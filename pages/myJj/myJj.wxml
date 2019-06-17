@@ -1,0 +1,20 @@
+<view class='xcCon'>
+<block wx:for="{{list}}" wx:key="item.ID">
+<view class='xcItem' data-id="{{item.ID}}" bindtap='gotoXcXq'>
+<view class='xcOne'>
+<image src="{{item.Avatar}}"></image>
+<text class='xcName'>{{item.NickName}}</text>
+<text class='xcCity'>{{item.City}}</text>
+</view>
+<view class='xcTwo'>
+<image src="{{item.Image}}"></image>
+<view class='xcTwoRight'>
+<text class='xcTitle'>{{item.City}}→{{item.DestinationCity}}</text>
+<text class='xcContent'>{{item.TripPlan}}</text>
+<text class='xcNum'>人数:{{item.Join}}</text>
+<text class='xcNum'>日期:{{item.Span}}</text>
+</view>
+</view>
+</view>
+</block>
+</view>

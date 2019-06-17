@@ -1,0 +1,36 @@
+<view  class='glCon'>
+<form bindsubmit="formSubmit">
+<view class='area'>
+<text>地区:</text>
+  <view class="picker">
+      {{startCity[1]}}
+    </view>
+</view>
+<input name="Title" placeholder='请输入相关标题(25字以内）' value='{{Title}}' focus='true'></input>
+<textarea name="Content" placeholder='请输入相应的补充描述' value="{{Content}}"></textarea>
+
+
+
+<text class='area sc' bindtap='uploadImg'>上传图片</text>
+
+<view class='upload' wx:if="{{isShow}}">
+<block wx:for="{{images}}" wx:key="item">
+<image src="{{item}}" ></image>
+</block>
+</view>
+
+<view class='upload' wx:else>
+<block wx:for="{{imagesTwo}}" wx:key="item">
+<image src="{{'http://jznj.nbxuanma.com/'+item}}" ></image>
+</block>
+</view>
+
+
+<button class='btn' form-type="submit">
+确定修改
+</button>
+
+
+</form>
+
+</view>

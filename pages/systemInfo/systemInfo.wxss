@@ -1,0 +1,28 @@
+@import "/wxParse/wxParse.wxss";
+.system{
+  width:100%;
+  font-size: 62.5%;
+}
+.title{
+  display: block;
+  width:100%;
+  text-align: center;
+  color:#262626;
+  margin-top: 20rpx;
+}
+.intro{
+  display: block;
+  width:95%;
+  margin-left: 2.5%;
+  margin-top: 10rpx;
+  line-height: 35rpx;
+}
+.main{
+  width:95%;
+  margin-left: 2.5%;
+}
+.wxParse-inline{
+font-size: 1em !important;
+overflow: hidden;
+line-height: 35rpx;
+}

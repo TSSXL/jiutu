@@ -1,0 +1,139 @@
+.con{
+  background-color: #f7f7f7;
+  width:100%;
+  font-size: 62.5%;
+  padding-bottom: 100rpx;
+}
+.one{
+  width:97.5%;
+  background-color: rgba(134, 193, 102, 0.795);
+  padding-left: 2.5%;
+  height:120rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.one text{
+  margin-top: 15rpx;
+  color:white;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+.two{
+  width:97.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  height:80rpx;
+  background-color: white;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.two text{
+  display: block;
+  height:100%;
+  line-height: 40px;
+  font-size: 1.4em;
+  letter-spacing: 3rpx;
+  font-weight: bold;
+}
+.num{
+  position: absolute;
+  right:2.5%;
+  color:#F17D23;
+}
+.three{
+  width:97.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  height:80rpx;
+  background-color: white;
+  padding-left: 2.5%;
+margin-top: 20rpx;
+line-height: 40px;
+font-size: 1.2em;
+font-weight: bold;
+letter-spacing: 1px;
+}
+.four{
+  width:97.5%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.four image{
+  height:160rpx;
+  width:160rpx;
+  border: 1px solid #cccccc;
+}
+.right{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+}
+.n{
+  font-size: 1.3em;
+  color:#262626;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.s{
+  font-size: 1.15em;
+  color:#808080;
+  letter-spacing: 1px;
+  margin-top: 20rpx;
+}
+.five{
+  width:97.5%;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.fLeft{
+  width:30%;
+  display: flex;
+  flex-direction: column;
+}
+.fRight{
+  position: absolute;
+  right:2.5%;
+    display: flex;
+  flex-direction: column;
+}
+.fLeft text{
+    display: block;
+  height:60rpx;
+  line-height: 30px;
+  font-size: 1.3em;
+  color:#808080;
+}
+.fRight text{
+  display: block;
+  height:60rpx;
+  line-height: 30px;
+  font-size: 1.3em;
+  color:#808080;
+  text-align: right;
+}
+
+button{  
+  width:80%;
+  text-align: center;
+  height:80rpx;
+  line-height: 40px;
+  background-color: white;
+  border: 1px solid #86C166;
+  color:#86C166;
+  margin-left: 10%;
+  margin-top: 100rpx;
+  font-size: 1.2em;
+}

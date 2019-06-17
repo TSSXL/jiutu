@@ -1,0 +1,54 @@
+<view class='Con'>
+
+<view class='one'>
+<image src="{{info.UserSimpleInfo.Image}}"></image>
+<text class='name'>{{info.UserSimpleInfo.NickName}}</text>
+<text class='tx' bindtap='withDraw'>提现</text>
+<modal hidden="{{hidden}}" title="提醒" confirm-text="是" cancel-text="否" bindcancel="cancel" bindconfirm="confirm">
+  提现需实名认证，是否去实名认证
+</modal>
+</view>
+
+<view class='my'>
+<text class='left'>我的钱包</text>
+<view class='right' bindtap='gotoMx'>
+<image src="../../image/check_arrow@3x.png"></image>
+<text>查看明细</text>
+</view>
+</view>
+
+<view class='money'>
+<view class='item'>
+<text class='a'>{{info.UserWallet.MoneyToBeSettled}}</text>
+<text class='b'>待结算金额</text>
+</view>
+<view class='no'></view>
+<view class='item'>
+<text class='a'>{{info.UserWallet.Balance}}</text>
+<text class='b'>待结算金额</text>
+</view>
+</view>
+
+<view class='t' bindtap='gotoMySy'>
+<text>我的收益</text>
+</view>
+
+
+<view class='money'>
+<view class='item itemTwo'>
+<text class='a aTwo'>{{info.UserProfit.AsMarketManager}}</text>
+<text class='b'>市场管家</text>
+</view>
+<view class='no noTwo'></view>
+<view class='item itemTwo'>
+<text class='a aTwo'>{{info.UserProfit.AsProjectManager}}</text>
+<text class='b'>项目管家</text>
+</view>
+<view class='no noTwo'></view>
+<view class='item itemTwo'>
+<text class='a aTwo'>{{info.UserProfit.Rebate}}</text>
+<text class='b'>本人消费</text>
+</view>
+</view>
+
+</view>

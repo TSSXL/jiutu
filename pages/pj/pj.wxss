@@ -1,0 +1,105 @@
+.pjCon{
+  width:100%;
+  font-size: 62.5%;
+}
+.item{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.itemOne{
+  width:97.5%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  position: relative;
+  padding-left: 2.5%;
+}
+.im{
+  height:160rpx;
+  width:160rpx;
+  border: 1px solid #cccccc;
+}
+.c{
+  height:100%;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  width:70%;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.n{
+  font-weight: bold;
+  color:#262626;
+     overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.s{
+  font-size: 1.15em;
+  color:#808080;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+.star{
+  height:80%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right:2.5%;
+}
+.star image{
+  height:50rpx;
+  width:50rpx;
+  margin-top: 50rpx;
+}
+textarea{
+  width:97.5%;
+ font-size: 1.2em;
+ font-weight: bold;
+  padding-left: 2.5%;
+}
+.upload{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
+  flex-wrap: wrap;
+}
+.sc{
+  display: block;
+  width:97.5%;
+  padding-left: 2.5%;
+  font-size: 1.3em;
+  font-weight: bold;
+  color:#262626;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.upload image{
+  width:22%;
+  height:160rpx;
+  margin-left: 2.4%;
+    margin-top: 20rpx;
+}
+.btn{
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+button{
+  width:80%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 1.3em;
+  color:white;
+  background-color: #86C166;
+  z-index: 999;
+}

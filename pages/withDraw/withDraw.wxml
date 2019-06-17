@@ -1,0 +1,71 @@
+<view class='con'>
+
+<view class='one'>
+<image src="../../image/alipay@3x.png"></image>
+<text>支付宝</text>
+</view>
+
+<form bindsubmit="showDialog">
+<view class='a'>
+<text>账号</text>
+<input name="Account" placeholder='输入您的支付宝账号'></input>
+</view>
+<view class='a b'>
+<text>姓名</text>
+<input name="Name" placeholder='输入支付宝账号对应的姓名'></input>
+</view>
+
+<view class='money'>
+<text class='titlea'>提现金额</text>
+<view class='m'>
+<text>￥</text>
+<input type="number" name="Money"></input>
+</view>
+<text class='sq'>{{text}}</text>
+</view>
+
+<button form-type="submit">确认提现</button>
+</form>
+
+<view class='psd' wx:if="{{isShow}}">
+  <text class='title' wx:if="{{isNoForget}}">支付密码</text>
+  <text class='title' wx:else>忘记密码</text>
+  <view class='num' wx:if="{{isNoForget}}">
+    <input class='numItem' maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+  <text class='forget' wx:if="{{isNoForget}}" bindtap='showForget'>忘记密码</text>
+
+  <view class='xg' wx:else>
+  <text class='ab'>验证码</text>
+  <view class='y'>
+  <input class='yzm' placeholder='请输入收到的验证码' bindinput='gety' ></input>
+  <view class='getYzm' bindtap='getYzm'>获取</view>
+  </view>
+  <view class='new'>
+  <text class='ab'>新密码</text>
+  <view class='num numT'>
+    <input class='numItem' maxlength='1' type='password' bindinput='getOne' focus='{{oneFocus}}'></input>
+      <input class='numItem' maxlength='1' type='password' bindinput='getTwo' focus='{{twoFocus}}'></input>
+        <input class='numItem' maxlength='1' type='password' bindinput='getThree' focus='{{threeFocus}}'></input>
+          <input class='numItem' maxlength='1' type='password' bindinput='getFour' focus='{{fourFocus}}'></input>
+            <input class='numItem' maxlength='1' type='password'bindinput='getFive' focus='{{fiveFocus}}'></input>
+              <input class='numItem' maxlength='1' type='password'bindinput='getSix' focus='{{sixFocus}}'></input>
+  </view>
+  </view>
+  </view>
+  <view class='foot'>
+  <text  bindtap='close'>取消</text>
+    <text style='color:#86C166'  bindtap='confirm'>确定</text>
+  </view>
+</view>
+
+
+<view class='noCon' wx:if="{{isShow}}"></view>
+
+</view>
+<!-- 遮罩层 -->

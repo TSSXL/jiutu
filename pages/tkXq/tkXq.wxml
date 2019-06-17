@@ -1,0 +1,43 @@
+<view class='con'>
+<view class='one'>
+<text wx:if="{{item.Status===1}}">退款中</text>
+<text wx:elif="{{item.Status===2}}">退款完成</text>
+<text wx:elif="{{item.Status===3}}">拒绝退款</text>
+<text wx:else>仲裁中</text>
+<text>{{item.ApplyTime}}</text>
+</view>
+<view class='two'>
+<text>退款金额</text>
+  <text class='num'>￥{{item.Money}}</text>
+</view>
+
+<view class='three'>
+退款信息
+</view>
+<view class='four'>
+<image src="{{item.Image}}"></image>
+<view class='right'>
+<text class='n'>{{item.ProductName}}</text>
+<text class='s'>{{item.SpecName}}</text>
+</view>
+</view>
+
+<view class='five'>
+<view class='fLeft'>
+<text>退款原因</text>
+<text>退款金额</text>
+<text>申请时间</text>
+<text>退款编号</text>
+</view>
+<view class='fRight'>
+<text>{{item.Reason}}</text>
+<text>￥{{item.Money}}</text>
+<text>{{item.ApplyTime}}</text>
+<text>{{item.ID}}</text>
+</view>
+</view>
+
+<button>联系卖家</button>
+
+</view>
+

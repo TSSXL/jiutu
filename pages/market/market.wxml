@@ -1,0 +1,30 @@
+<view class='market'>
+<!-- 未成为主管 -->
+<view class='one' wx:if="{{isShow}}">
+<block wx:for="{{list}}" wx:key="item.num">
+<view class='item'>
+ <view class='circle'>{{item.num}}</view>
+ <text>{{item.content}}</text>
+</view>
+</block>
+</view>
+<!-- 成为主管 -->
+<view class='two' wx:else>
+<block wx:for="{{infoList}}" wx:key="item.Title">
+<view class='itemTwo' data-id="{{item.ID}}" bindtap='gotoInfo'>
+<text class='t'>{{item.Title}} </text>
+<view class='sz'>
+<view class='left'>
+<text>本月销量:{{item.MonthCount}}</text>
+<text>总销量:{{item.TotalCount}}</text>
+</view>
+<view class='left'>
+<text>本月销量额:{{item.MonthMoney}}</text>
+<text>总销售额:{{item.TotalMoney}}</text>
+</view>
+</view>
+</view>
+</block>
+</view>
+
+</view>

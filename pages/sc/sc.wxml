@@ -1,0 +1,16 @@
+<view class='scCon'>
+<view  class='tab'>
+<text data-index="0" bindtap='change' style="border-bottom:{{time}}">时间</text>
+<text data-index="1"  bindtap='change' style="border-bottom:{{peo}}">人数</text>
+<text  data-index="2" bindtap='change' style="border-bottom:{{yj}}">业绩</text>
+</view>
+<block wx:for="{{list}}" wx:key="list.CreateTime">
+<view class='item'>
+<image src="{{item.Image}}"></image>
+<view class='twoText'>
+<text class='name'>{{item.NickName}}</text>
+<text class='con'>推广人数:{{item.UserCount}}人</text>
+</view>
+</view>
+</block>
+</view>

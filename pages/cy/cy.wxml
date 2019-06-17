@@ -1,0 +1,9 @@
+<view class='cyCon'>
+<image class='infoImg' src="{{info.Image}}"></image>
+<text class='name'>{{info.NickName}}</text>
+<canvas class='code' canvas-id='canvasT'></canvas>
+<text class='my'>我的创业码: {{info.InviteCode}}</text>
+</view>
+
+
+

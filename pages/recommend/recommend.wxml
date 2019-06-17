@@ -1,0 +1,58 @@
+<view class="recommend">
+    <view class='head'>
+<image src="../../image/login_logo@3x.png"></image>
+ <input placeholder='请输入您要搜索的商品/品牌' bindfocus='gotoSearch'></input>
+ <image src="../../image/message@2x.png" bindtap='gotoMsg'></image>
+</view>
+
+<view class='main'>
+<view class='left'>
+<view class='nav brand' bindtap='showBrand' style="background:{{brandColor}};  border-top-right-radius: {{num}};  border-bottom-right-radius: {{num}};color:{{color}}">
+品牌墙
+</view>
+<block wx:for='{{leftList}}' wx:for-item='i' wx:key='i.ID'>
+ <view class='nav'  data-id='{{i.ID}}' data-index="{{index}}" bindtap='show' style="background-color:{{i.ID===ID?bgColor:'none'}};margin-Top:{{index===0?jl:'none'}};color:{{i.ID===ID?textColor:'none'}}">
+{{i.Name}}
+ </view>
+ </block>
+</view>
+
+<!-- 非品牌墙的不同商品 -->
+<view class='right' wx:if="{{isShow}}">
+<block wx:for="{{productList}}" wx:key="i.ID" wx:for-item="i" >
+ <view class='goods'>
+<view class='Gimage'>
+<image src="{{i.Image}}" data-id="{{i.ID}}" bindtap='gotoInfo'></image>
+</view>
+
+ <text class='title'>{{i.Name}}</text>
+ <view class='info'>
+ <text>￥{{i.Price}}</text>
+  <view class='sales'>
+    <text class='s'>{{i.Point}}</text>
+     <image  src='../../image/jiutu_points@2x.png'></image>
+  </view>
+</view>
+
+ </view>
+ </block>
+</view>
+
+<!-- 品牌墙下右侧的不同品牌 -->
+<view class='right two' wx:else>
+<block wx:for="{{productList}}" wx:key="i.ID" wx:for-item="i" >
+<text class='name'>{{i.Name}}</text>
+<view class='g'>
+<block wx:for="{{i.Brands}}" wx:for-item="j" wx:key="j.ID">
+ <view class='goods goodsTwo'>
+<view class='Gimage GjTwo'>
+<image  src="{{j.Image}}" data-id='{{j.ID}}' data-name="{{j.Name}}" bindtap='gotoShop' ></image>
+</view>
+ <text class='title titleTwo'>{{j.Name}}</text>
+ </view>
+ </block>
+</view>
+ </block>
+</view>
+</view>
+</view>

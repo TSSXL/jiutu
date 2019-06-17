@@ -1,0 +1,44 @@
+<view class='xcXqCon'>
+
+ <view class='one'>
+<view class='info'>
+<image src="{{info.Avatar}}"></image>
+<text>{{info.NickName}}</text>
+</view>
+ <view class='two'>
+<image src="{{info.Image}}"></image>
+<view class='twoRight'>
+ <text class='title'>{{info.City}}  →  {{info.DestinationCity}}</text>
+ <view>
+  <text class='num'>人数:{{info.Join}}</text>
+  <text class='num showMore' data-id="{{info.ID}}" bindtap='showPeople' >查看详情</text>
+ </view>
+ <text class='num'>费用:{{info.Fee}}元/人</text>
+ <text class='num'>电话:{{info.PublisherPhone}}</text>
+ <text class='num'>日期:{{info.Span}}</text>
+</view>
+</view> 
+</view>
+<text class='jh'>行程计划</text>
+<view class='c'>
+<textarea class='content' value='{{content}}' bindinput='changeCon'>
+</textarea>
+<view class='allImg'>
+<block wx:for="{{info.Images}}" wx:key="item">
+<image src="{{item}}"></image>
+</block>
+</view>
+</view>
+
+<view class='btn' wx:if="{{info.IsMine}}">
+<view class='de' data-id="{{info.ID}}" bindtap='cancel' >取消集结令</view>
+<view class='de bc' data-id="{{info.ID}}" bindtap='update'>保存</view>
+</view>
+
+<view class='btn' wx:else>
+<view class='join' data-id="{{info.ID}}" bindtap='addJoin'>
+加入
+</view>
+</view>
+
+</view>

@@ -1,0 +1,124 @@
+.orderInfo{
+  width:100%;
+  background-color: #f7f7f7;
+  font-size: 62.5%;
+}
+.info{
+  width:100%;
+display: flex;
+flex-direction: column;
+padding-top: 10rpx;
+background-color: white;
+}
+.first{
+  width:85%;
+  height:80rpx;
+display: flex;
+flex-direction: row;
+margin-left: 7.5%;
+}
+.first text{
+  display: block;
+  width:50%;
+  height:100%;
+  line-height: 40px;
+  color:#333333;
+  letter-spacing: 1px;
+  font-size: 1.15em;
+  text-indent: 5%;
+}
+.phone{
+  text-align: right;
+}
+.second{
+  width:95%;
+  display: flex;
+  flex-direction: row;
+  margin-top: -30rpx;
+  margin-left: 1%;
+}
+.leftImg{
+  width:70rpx;
+  height:70rpx;
+}
+.add{
+  margin-left: 7.5%;
+  color:#333333;
+  height:40rpx;
+  margin-top: -10rpx;
+  padding-bottom: 20rpx;
+  font-size: 1.15em;
+    text-indent: 5%;
+}
+.title{
+  margin-top: 20rpx;
+  width: 97.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  height:80rpx;
+  background-color: white;
+  padding-left: 2.5%;
+  font-size: 1.3em;
+  font-weight: bold;
+  color:#262626;
+  letter-spacing: 3rpx;
+}
+.content{
+  width:97.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2.5%;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+}
+.content image{
+  width:160rpx;
+  height:160rpx;
+  border: 1px solid #cccccc;
+}
+.xx{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  width:48%;
+  margin-left: 2.5%;
+}
+.xOne{
+  color:#262626;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical;
+}
+.xTwo{
+  margin-top: 20rpx;
+  color:#808080;
+}
+.num{
+  width:30%;
+  display: flex;
+  flex-direction: column;
+  height:80%;
+  position: absolute;
+  right:2.5%;
+  text-align: right;
+}
+.btn{
+  width:160rpx;
+  height:60rpx;
+  line-height: 30px;
+  text-align: center;
+  color:#262626;
+  border: 1px solid #B3B3B3;
+  position: absolute;
+  bottom: 0;
+  right:0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,14 @@
+<view class='peopleInfo'>
+<block wx:for="{{info}}" wx:key="info.NickName">
+<view class='item'>
+<image src="{{item.Avatar}}"></image>
+<text>{{item.NickName}}</text>
+<text class='right'>电话:{{item.Phone}}</text>
+</view>
+</block>
+
+<view class='no' wx:if="{{info.length==0}}">
+暂无人员加入
+
+</view>
+</view>

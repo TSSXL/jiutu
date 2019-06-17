@@ -1,0 +1,377 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.6",
+	"appid": "wx8c392934c8edaabc",
+	"projectname": "%E4%B9%85%E9%80%94",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 46,
+			"list": [
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "shop",
+					"pathName": "pages/shopCar/shopCar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "re",
+					"pathName": "pages/recommend/recommend",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "us",
+					"pathName": "pages/us/us",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "shopa",
+					"pathName": "pages/shop/shop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "goodInfo",
+					"pathName": "pages/goodInfo/goodInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/Search/Search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "sc",
+					"pathName": "pages/sc/sc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "coll",
+					"pathName": "pages/collect/collect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ad",
+					"pathName": "pages/advice/advice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "cy",
+					"pathName": "pages/cy/cy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ma",
+					"pathName": "pages/market/market",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "market",
+					"pathName": "pages/market/market",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "marketInfo",
+					"pathName": "pages/marketInfo/marketInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "in",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh",
+					"pathName": "pages/zh/zh",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "real",
+					"pathName": "pages/real/real",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "confirm",
+					"pathName": "pages/confirm/confirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addAddress",
+					"pathName": "pages/addAddress/addAddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "updateAddress",
+					"pathName": "pages/updateAddress/updateAddress",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "createOrder",
+					"pathName": "pages/createOrder/createOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "commu",
+					"pathName": "pages/commu/commu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "commuXq",
+					"pathName": "pages/commuXq/commuXq",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "help",
+					"pathName": "pages/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "xcXq",
+					"pathName": "pages/xcXq/xcXq",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myJj",
+					"pathName": "pages/myJj/myJj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "jl",
+					"pathName": "pages/jl/jl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "fbJ",
+					"pathName": "pages/fbJ/fbJ",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "gl",
+					"pathName": "pages/gl/gl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "su",
+					"pathName": "pages/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "glBj",
+					"pathName": "pages/glBj/glBj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wallet",
+					"pathName": "pages/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "sy",
+					"pathName": "pages/mySy/mySy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 37,
+					"name": "myAllOrder",
+					"pathName": "pages/myAllOrder/myAllOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderInfo",
+					"pathName": "pages/orderInfo/orderInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tk",
+					"pathName": "pages/tk/tk",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tkReason",
+					"pathName": "pages/tkReason/tkReason",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pj",
+					"pathName": "pages/pj/pj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "msg",
+					"pathName": "pages/msg/msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "withDraw",
+					"pathName": "pages/withDraw/withDraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "withDrawS",
+					"pathName": "pages/withDrawSuccess/withDrawSuccess",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "msg",
+					"pathName": "pages/msg/msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "citys",
+					"pathName": "pages/citys/citys",
+					"scene": null
+				}
+			]
+		}
+	}
+}

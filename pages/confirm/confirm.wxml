@@ -1,0 +1,20 @@
+<view class='content'>
+<text class='info'>请核对身份信息无误</text>
+<view class='item'>
+<text class='left'>身份证姓名</text>
+<input class='right' placeholder='请输入您的姓名' bindinput='getName'>陈大头</input>
+</view>
+<view class='item t'>
+<text class='left'>身份证号码</text>
+<input class='right' placeholder='请输入您的身份证号' bindinput='getID'></input>
+</view>
+
+<view class='btn'>
+<view class='re' style='background-color:{{bgColorOne}};color:{{colorOne}}' bindtap='takePh'>
+重新拍摄
+</view>
+<view class='re' style='background-color:{{bgColorTwo}};color:{{colorTwo}}' bindtap='confirm'>
+完成
+</view>
+</view>
+</view>

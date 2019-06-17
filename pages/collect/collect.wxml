@@ -1,0 +1,22 @@
+
+<view class='main'>
+<view class='header' wx:if="{{isShow}}" bindtap='gl'>管理</view>
+<view class='header' wx:if="{{!isShow}}" bindtap='gl'>完成</view>
+ <block  wx:for="{{list}}" wx:key="{{list.ID}}" wx:for-item="i" wx:for-index="index">
+ <view class='mainItem'>
+  <image class='firstImg' src="{{i.Image}}" data-ID="{{i.ID}}" bindtap='gotoInfo' ></image>
+  <view class='info'>
+      <text class='ti'>{{i.Name}}</text>
+      <text class='m'>￥{{i.Price}}</text>
+  </view>
+  <view class='xl' wx:if="{{isShow}}">
+    <image  src='../../image/jiutu_points@2x.png'></image>
+    <text>{{i.Point}}</text>
+  </view>
+  <view class='red' wx:else>
+  <image  src='../../image/goods_details_collection@2x.png'  data-id="{{i.ID}}"  data-index="{{index}}" bindtap='sc' wx:if="{{flag[index]}}"></image>
+    <image  src='../../image/goods_details_collection_selected@2x.png'  data-id="{{i.ID}}"  data-index="{{index}}" bindtap='qx' wx:else></image>
+  </view>
+ </view>
+ </block>
+</view>

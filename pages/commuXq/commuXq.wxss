@@ -1,0 +1,190 @@
+@import "/wxParse/wxParse.wxss";
+
+.commuXqCon{
+  width:100%;
+  font-size: 62.5%;
+  background-color: #f7f7f7;
+}
+.title{
+  display: block;
+  width:97.5%;
+  font-size: 1.4em;
+  font-weight: bold;
+  color:#262626;
+  padding-left: 2.5%;
+  letter-spacing: 1rpx;
+padding-top: 20rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+}
+.people{
+  width:97.5%;
+  padding-left: 2.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.people image{
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+}
+.people text{
+line-height: 35px;
+  color:#808080;
+  font-weight: bold;
+  margin-left: 2%;
+}
+.content{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-bottom: 20rpx;
+}
+.content text{
+  display: block;
+  width:92%;
+  font-size: 1.15em;
+  color:#4D4D4D;
+  font-weight:bold;
+  margin-top: 20rpx;
+  margin-left: 4%;
+  line-height: 25px;
+}
+.con{
+  width:97.5%;
+  padding-left: 2.5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.con image{
+  height:190rpx;
+width:29%;
+margin-left: 2%;
+margin-top: 20rpx;
+border: 1px solid #cccccc;
+}
+.pl{
+    display: block;
+  width:97.5%;
+  font-size: 1.4em;
+  font-weight: bold;
+  color:#262626;
+  padding-left: 2.5%;
+  letter-spacing: 1rpx;
+  margin-top: 20rpx;
+background-color: white;
+padding-top: 25rpx;
+padding-bottom: 25rpx;
+border-bottom: 1px solid #cccccc;
+}
+.comment{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1px solid #cccccc;
+  background-color: white;
+}
+.commentOne{
+  width:95%;
+  display: flex;
+  flex-direction: row;
+  height:80rpx;
+  padding-left: 2.5%;
+  padding-bottom: 10rpx;
+  position: relative;
+}
+.commentOne image{
+  height:60rpx;
+  width:60rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+.commentOne text{
+   display: block;
+   height:100%;
+   line-height: 40px;
+   margin-left: 1%;
+   font-weight: bold;
+}
+.main{
+  width:95%;
+  padding-left: 2.5%;
+  font-size: 1.15em;
+  line-height: 25px;
+  color:#4D4D4D;
+  font-weight: bold;
+  letter-spacing: 1rpx;
+}
+.name{
+  color:#262626;
+}
+.time{
+  color:#808080;
+  position: absolute;
+  right:2.5%;
+}
+.wxParse-inline{
+ font-size: 1.15em;
+  color:#4D4D4D;
+  font-weight:bold;
+padding-left: 4%;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.write{
+  width:100%;
+  height:80rpx;
+  background-color: white;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  position: fixed;
+  bottom: 0;
+  opacity: 0.8;
+}
+.write input{
+  width:86%;
+  height:70rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 15px;
+  background-color: rgb(204, 204, 204);
+  margin-left: 5%;
+margin-top: 5rpx;
+text-align: center;
+color:#808080;
+font-weight: bold;
+}
+.cz{
+  width:35%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right:0;
+  padding-top: 5rpx;
+}
+.bj{
+  width:50%;
+  display: flex;
+  flex-direction: row;
+}
+.bj image{
+  width:50rpx;
+  height:50rpx;
+}
+.bj text{
+  color:#4DA4ED;
+  margin-left: 1%;
+}
+.scImg{
+  width:40rpx !important;
+  height:40rpx !important;
+  margin-top: 5rpx;
+}

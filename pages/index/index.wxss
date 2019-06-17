@@ -1,0 +1,107 @@
+/**index.wxss**/
+.container{
+  font-size: 62.5%;
+  padding: 140rpx 0;
+}
+.bg{
+  position: absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  z-index: -1;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.jt{
+   width: 300rpx;
+  height: 290rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+width:80%;
+margin-left: 10%;
+}
+.num{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  border-bottom: 1px solid #86C166;
+  padding-bottom: 10rpx;
+}
+.num image{
+  height:50rpx;
+  width:50rpx;
+   position: absolute;
+   margin-top: 15rpx;
+   margin-left: 5rpx;
+}
+.num input{
+  font-size: 1.2em;
+  width:80%;
+  height:2rem;
+margin-left: 2rem;
+ color:#4D4D4D;
+ font-family:SourceHanSansSC-Medium;
+opacity:0.8;
+}
+.num button{
+  position: absolute;
+  right:70rpx;
+  height:1.8rem;
+  font-size: 1.2em;
+  background-color: rgba(134,193,102,1);
+  border-radius: 50rpx;
+  padding-left: 20px;
+  padding-right: 20px;
+  color:white;
+}
+.login{
+  margin-top: 200rpx;
+  height:88rpx;
+background:rgba(134,193,102,1);
+border-radius:44px;
+color:white;
+}
+.read{
+  width:100%;
+  height:2rem;
+  display: flex;
+  flex-direction: row;
+  padding-left:3rem;
+  margin-top: 15rpx;
+}
+.my{
+  color:#7F7F7F;
+  font-weight: bolder;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.yh{
+  color:#86C166;
+  font-weight: bolder;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.modal{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}

@@ -1,0 +1,90 @@
+<view class='con'>
+
+<!-- 我的客服
+<view class='kf'>
+<image src="../../image/icon_customer_service_message@3x.png"></image>
+<view class='right'>
+<view class='ba'>
+<text class='title'>客服消息</text>
+<contact-button 
+class='concact'
+ type="default-dark"
+ size="20"
+ session-from="weapp"
+>
+</contact-button>
+</view>
+<text class='item'>【您收到一条新消息】</text>
+</view>
+<text class='time'>20：21</text>
+</view> -->
+
+<!-- 系统公告 -->
+<block wx:for="{{systemList}}" wx:key="item.ID">
+<view class='kf'  data-id="{{item.ID}}" bindtap='showSystem'>
+<image src="../../image/icon_system_announcement@3x.png"></image>
+<view class='right'>
+<text class='title'>{{item.Title}}</text>
+<view class='gg'>
+<text>{{item.SubTitle}}</text>
+<text>　　{{item.Content1}}</text>
+</view>
+</view>
+<text class='time'>20：21</text>
+</view>
+</block>
+
+<!-- 我的快递 -->
+<block>
+<view class='kd' wx:for="{{postList}}" wx:key="item.ID">
+<view class='he'>
+<image class='heImg' src="../../image/icon_my_courier@3x.png"></image>
+<text class='my'>{{item.Title}}</text>
+<text class='time'>20：21</text>
+</view>
+<view class='kdItem'>
+<image src="{{item.Image}}"></image>
+<view class='text'>
+<text class='status'>{{item.SubTitle}}</text>
+<text class='name'>{{item.Content1}}</text>
+<text class='name'>{{item.Content2}}</text>
+</view>
+</view>
+</view>
+</block>
+
+
+<!-- 我的支付 -->
+<block wx:for="{{payList}}" wx:key="item.ID">
+<view class='kf'>
+<image src="../../image/icon_system_announcement@3x.png"></image>
+<view class='right'>
+<text class='title'>{{item.Title}}</text>
+<view class='gg'>
+<text>{{item.SubTitle}}</text>
+<text>{{item.Content1}}</text>
+<text>{{item.Content2}}</text>
+</view>
+</view>
+<text class='time'>20：21</text>
+</view>
+</block>
+
+
+<!-- 交易提醒 -->
+<block wx:for="{{jyList}}" wx:key="item.ID">
+<view class='kf jy'>
+<image src="../../image/icon_system_announcement@3x.png"></image>
+<view class='right'>
+<text class='title'>{{item.Title}}</text>
+<view class='gg'>
+<text>{{item.SubTitle}}</text>
+<text>{{item.Content1}}</text>
+</view>
+</view>
+<text class='time'>20：21</text>
+</view>
+</block>
+
+
+</view>

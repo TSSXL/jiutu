@@ -1,0 +1,55 @@
+<view class="mine">
+<!-- 头部 --> 
+ <view class='headCon' bindtap='gotoZh'>
+ <image class='bgImg' src="../../image/head_portrait_bg@3x.png" ></image>
+ <image class='icon' src="{{info.Image}}"></image>
+  <text class='name'>{{info.NickName}}</text>
+ </view>
+<!-- 订单 -->
+ <view class='myOrder'>
+ <text class='my'>我的订单</text>
+<view class='orderRight'>
+<text bindtap='gotoMyOrder'>查看全部订单</text>
+<image src="../../image/check_arrow@3x.png"></image>
+</view>
+ </view>
+<!-- 五个图标 -->
+<view class='five'>
+<block wx:for="{{fiveList}}" wx:for-item="item" wx:key="item.name" wx:for-index="index">
+<view  class='item'>
+<image src="{{item.imgPath}}" data-index="{{index}}" bindtap='goOrder'></image>
+<text data-index="{{index}}" bindtap='goOrder'>{{item.name}}</text>
+</view>
+</block>
+</view>
+
+<!-- 创业管理 -->
+<view class='cy'>
+ 创业管理
+</view>
+ <!-- 四个图标 -->
+<view class='five'>
+<block wx:for="{{fourList}}" wx:for-item="item" wx:key="item.name" wx:for-index="index">
+<view class='item itemTwo' data-index="{{index}}" bindtap='handleFour'>
+<image src="{{item.imgPath}}"></image>
+<text>{{item.name}}</text>
+</view>
+</block>
+</view>
+<!-- 个人设置 -->
+<view class='setPer'>
+个人设置
+</view>
+<!-- 八个图标 -->
+<view class='eight'>
+<block wx:for="{{eightList}}" wx:for-item="item" wx:key="item.name" wx:for-index="idx">
+<view class='item itemTwo' data-index="{{idx}}" bindtap='goPage'>
+<view class='myCollect'>
+<image src="{{item.imgPath}}"></image>
+<text wx:if="{{idx==1 && list.length>0}}">{{list.length}}</text>
+</view>
+<text>{{item.name}}</text>
+</view>
+</block>
+</view>
+</view>

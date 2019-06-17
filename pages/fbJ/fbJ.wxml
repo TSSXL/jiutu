@@ -1,0 +1,37 @@
+<view class='xcXqCon'>
+
+ <view class='one'>
+ <view class='two'>
+<image src="{{'http://jznj.nbxuanma.com/'+images[0]}}"></image>
+<view class='twoRight'>
+ <text class='title'>{{info.City}}  →  {{info.DestinationCity}}</text>
+ <view>
+  <text class='num'>人数:{{info.ParticipantNum}}</text>
+ </view>
+ <text class='num'>费用:{{info.Fee}}元/人</text>
+ <text class='num'>电话:{{info.PublisherPhone}}</text>
+ <text class='num'>日期:{{info.Start}}到{{info.End}}</text>
+</view>
+</view> 
+</view>
+<text class='jh'>行程计划</text>
+<view class='c'>
+<view class='content'>
+{{info.TripPlan}}
+</view>
+<view class='allImg'>
+<block wx:for="{{images}}" wx:key="item">
+<image src="{{'http://jznj.nbxuanma.com/'+item}}"></image>
+</block>
+</view>
+</view>
+
+
+<view class='btn' >
+<view class='join'  bindtap='add'>
+确定发布
+</view>
+</view>
+
+</view>
+

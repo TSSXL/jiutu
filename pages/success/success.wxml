@@ -1,0 +1,10 @@
+<view class='su'>
+<view class='main'>
+<image src="../../image/release_success@3x.png"></image>
+<text>发布成功</text>
+</view>
+
+<view class='re' bindtap='goto'>
+返回首页
+</view>
+</view>

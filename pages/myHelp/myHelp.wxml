@@ -1,0 +1,27 @@
+<view class='myHelp'>
+<block wx:for="{{qzInfo}}" wx:for-item="i" wx:key="i.ID">
+ <view class='qzCon' data-id="{{i.ID}}" bindtap='gotoQzXq'>
+  <view class='qzTitle'>
+  <text class='fm'>{{i.Title}}</text>
+  <view class='ren'>
+  <text class='dt'>{{i.NickName}}:</text>
+   <text class='lx'>{{i.Content}}</text>
+  </view>
+  <view class='qzImg'>
+  <block wx:for="{{i.Images}}" wx:key="item">
+  <image src="{{item}}"></image>
+      </block>
+  </view>
+  <view class='f'>
+  <image src="{{i.Avatar}}"></image>
+  <text>{{i.NickName}}</text>
+  <text class='qzTime'>{{i.CreateTime}}</text>
+  <view class='qzRight'>
+  <image src="../../image/icon_comments@3x.png"></image>
+  <text>{{i.CommentCount}}</text>
+  </view>
+  </view>
+  </view>
+ </view>
+</block>
+</view>

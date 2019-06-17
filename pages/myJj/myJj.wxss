@@ -1,0 +1,79 @@
+.xcCon{
+  width:100%;
+  background-color: white;
+  font-size: 62.5%;
+}
+.xcItem{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #CCCCCC;
+}
+.xcOne{
+  width:97.5%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2.5%;
+}
+.xcOne image{
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+}
+.xcName,.xcCity{
+  line-height: 30px;
+  color:#262626;
+  font-weight: bold;
+  margin-left: 1%;
+}
+.xcCity{
+  margin-left: 3%;
+  color:#808080;
+}
+.xcTwo{
+  width:97.5%;
+  padding-left: 2.5%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.xcTwo image{
+  height:220rpx;
+  width:32%;
+  border: 1px solid #CCCCCC;
+}
+.xcTwoRight{
+  width:62%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+  height:220rpx;
+}
+.xcTitle{
+  font-size: 1.5em;
+  color:#262626;
+   font-weight: bold;
+   letter-spacing: 3px;
+}
+.xcContent{
+  color:#808080;
+  letter-spacing: 1rpx;
+   font-weight: bold;
+   margin-top: 20rpx;
+   width:100%;
+   height:60rpx;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.xcNum{
+  color:#262626;
+  font-weight: bold;
+  margin-top: 15rpx;
+  letter-spacing: 1px;
+}

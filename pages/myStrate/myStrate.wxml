@@ -1,0 +1,23 @@
+<view class='myStrate'>
+
+<block wx:for="{{zbInfo}}" wx:key="item.ID">
+<view class='zbc' data-ID="{{item.ID}}" bindtap='gotoCommuXq'>
+ <view class='zbT'>
+ <text class='z'>{{item.Title}}</text>
+ <text class='zbTime'>{{item.PublishTime}}</text>
+ </view>
+ <view class='zbInfo'>
+ <image src="{{item.Avatar}}"></image>
+ <text>{{item.NickName}}</text>
+ <text>{{item.CityName}}</text>
+ </view>
+ <text class='nr'>{{item.Content}}</text>
+ <view class='zbImg'>
+ <block wx:for="{{item.Images}}" wx:key="item">
+ <image src="{{item}}"></image>
+   </block>
+ </view>
+</view>
+</block>
+
+</view>

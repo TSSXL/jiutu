@@ -1,0 +1,9 @@
+<view class='con'>
+
+<image src="../../image/withdrawal_complete@3x.png"></image>
+
+<text>您的提现申请已成功</text>
+<text> 预计1~2个工作日到账</text>
+
+<button bindtap='goto'>确定</button>
+</view>

@@ -1,0 +1,58 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='commuXqCon'>
+<text class='title'>{{info.Detail.Title}}</text>
+
+<view class='people' wx:if="{{type!=0}}">
+ <image src="{{info.Detail.Avatar}}"></image>
+ <text>{{info.Detail.NickName}}   {{info.Detail.CityName}}</text>
+</view>
+
+<view class='content' >
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+<view class='con' >
+<block wx:for="{{info.Detail.Images}}" wx:key="item">
+<image src="{{item}}"></image>
+</block>
+</view>
+
+
+</view>
+
+<view class='people' wx:if="{{type==0}}">
+ <image src="{{info.Detail.Avatar}}"></image>
+ <text>{{info.Detail.NickName}}   {{info.Detail.CityName}}</text>
+ <view class='cz'>
+ <view class='bj'>
+ <image src="../../image/bj.svg"></image>
+ <text data-id="{{info.Detail.ID}}" bindtap='gotoBj'>编辑</text>
+ </view>
+  <view class='bj'>
+ <image class='scImg' src="../../image/sc.svg"></image>
+ <text data-id="{{info.Detail.ID}}" bindtap='deleteStrate'>删除</text>
+ </view>
+ </view>
+</view>
+
+
+
+<text class='pl'>评论</text>
+
+<block wx:for="{{info.Comments}}" wx:for-item="i" wx:key="i.CommentID">
+<view class='comment'>
+ <view class='commentOne'>
+ <image src="{{i.Avatar}}"></image>
+ <text class='name'>{{i.NickName}}</text>
+ <text class='time'>{{i.CreateTime}}</text>
+ </view>
+ <view class='main'>
+  　　{{i.Content}}
+ </view>
+</view>
+</block>
+
+<view class='write'>
+ <input placeholder='写评论' bindconfirm="write"></input>
+</view>
+
+</view>

@@ -1,0 +1,33 @@
+<view class='shop'>
+<view class='head'>
+<text class='t' bindtap='changeAll'>综合</text>
+<text class='s'>|</text>
+<text class='t' bindtap='changeNum'>销量</text>
+<text class='s'>|</text>
+<view class='t price'>
+<text class='p' >价格</text>
+<image src="../../image/xia@3x.png" bindtap='changePrice' wx:if="{{isShow}}"></image>
+<image src="../../image/shang@3x.png" bindtap='changePriceDown' wx:else></image>
+</view>
+<text class='s'>|</text>
+<text class='t' bindtap='changeFs'>评分</text>
+</view>
+<view class='main'>
+ <block  wx:for="{{list}}" wx:key="{{list.ID}}" wx:for-item="i">
+ <view class='mainItem' data-ID="{{i.ID}}" bindtap='gotoInfo'>
+  <image class='firstImg' src="{{i.Image}}" ></image>
+  <view class='info'>
+      <text class='ti'>{{i.Name}}</text>
+      <text class='m'>￥{{i.Price}}</text>
+      <text class='pr'>{{i.Paied}}人已付款</text>
+  </view>
+  <view class='xl'>
+    <image  src='../../image/jiutu_points@2x.png'></image>
+    <text>{{i.Point}}</text>
+  </view>
+ </view>
+ </block>
+</view>
+
+<text class='phone' wx:if="{{phone!=''}}">联系商家:{{phone}}</text>
+</view>

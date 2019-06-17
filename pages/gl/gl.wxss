@@ -1,0 +1,91 @@
+.glCon{
+  width:100%;
+  background-color: #f7f7f7;
+  font-size: 62.5%;
+  padding-bottom: 200rpx;
+}
+.area{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #cccccc;
+  font-size: 1.2em;
+  font-weight: bold;
+  height:60rpx;
+}
+.area text{
+  margin-left: 2.5%;
+    color:#262626;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.picker{
+  margin-left: 2%;
+  color:#262626;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+picker{
+  width:20%;
+  margin-left: 2%;
+  color:#86C166;
+}
+.xg{
+  line-height: 30px;
+    letter-spacing: 2px;
+}
+input,textarea{
+  width:93%;
+  margin-left: 2.5%;
+  background-color: #f1eaea;
+  height:90rpx;
+  margin-top: 20rpx;
+  font-size: 1.15em;
+  font-weight: bold;
+  color:#808080;
+  letter-spacing: 2px;
+  padding-left: 3%;
+}
+textarea{
+  text-indent: 2%;
+  height:500rpx;
+  padding-top: 10rpx;
+  padding-left: 3%;
+}
+.sc{
+  padding-left: 2.5%;
+  margin-top: 20rpx;
+  background-color: #f7f7f7;
+  border-bottom: none;
+}
+.upload{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10rpx;
+  padding-bottom: 30rpx;
+}
+.upload image{
+  width:22%;
+  height:160rpx;
+  margin-left: 2.4%;
+}
+
+.btn{
+width:70%;
+  height:80rpx;
+  text-align: center;
+color:white;
+  background-color:#86C166;
+  margin-top: 40rpx;
+  position: absolute;
+  bottom: 20rpx;
+  font-size: 1.3em;
+  line-height: 40px;
+  border-radius: 5rpx;
+  margin-left: 15%;
+
+}

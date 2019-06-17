@@ -1,0 +1,55 @@
+<view class="shopCar" wx:if="{{proList.length!==0}}">
+<view  class='bj' bindtap='upInfo' wx:if="{{!choseNum}}">编辑</view>
+<view  class='bj' bindtap='upInfo'wx:else>完成</view>
+  <view class='mainCon' wx:if="proList.length>=0">
+    <block wx:for="{{proList}}" wx:for-item="i" wx:key="i.ID" wx:for-index="index">
+    <view class='item' >
+     <view class='title'>
+      <image src="../../image/set_default@3x.png" data-index="{{index}}" style="display:{{select===index?aStyle:''}}"  bindtap='changeNo'></image>
+      <image src="../../image/not_set_default@3x.png" data-index="{{index}}"  style="display:{{select===index?bStyle:'none'}}" bindtap='changeAll'></image>
+       <text>{{i.BuinessName}}</text>
+     </view>
+     <block wx:for="{{i.Products}}" wx:for-item="j" wx:key="j.ID">
+     <view class='content'>
+    <image src="../../image/not_set_default@3x.png" wx:if="{{!j.IsSelected}}" data-id="{{j.ID}}" bindtap='changeOne' ></image>
+      <image src="../../image/set_default@3x.png" wx:else data-id="{{j.ID}}" bindtap='changeOne'></image>
+      <view class='secondImg'>
+       <image src='{{j.Image}}' data-id="{{j.ProductSpecID}}" bindtap='gotoInfo'></image>
+      </view>
+      <view class='twoText'>
+       <text class='f'>{{j.Name}}</text>
+       <text class='s'>{{j.Spec}}</text>
+      </view>
+      <view class='num'>
+       <text class='p'>￥{{j.Price}}</text>
+       <text class='m'>x{{j.Quantity}}</text>
+       <view class='how' wx:if="{{choseNum}}">
+        <image src="../../image/icon_shopping_cart_reduction@3x.png" data-id="{{j.ID}}" bindtap='cutNum'></image>
+        <view class='howM'>
+        {{j.Quantity}}
+        </view>
+        <image src="../../image/icon_shopping_cart_increase@3x.png" data-id="{{j.ID}}" bindtap='addNum'></image>
+       </view>
+      </view>
+     </view>
+     </block>
+         </view>
+    </block>
+    <view class='foot'>
+    <view class='selectAll'>
+      <image src="../../image/not_set_default@3x.png" wx:if="{{itemShow}}" bindtap='choseAll'></image>
+      <image src="../../image/set_default@3x.png" wx:else bindtap='choseAll'></image>
+      <text>全选</text>
+    </view>
+    <text class='all' wx:if="{{!choseNum}}">合计:</text>
+   <text class='allM' wx:if="{{!choseNum}}">￥{{allPrice}}</text>
+   <view class='js' wx:if="{{!choseNum}}" bindtap='js'>结算</view>
+    <view class='js' wx:if="{{choseNum}}" bindtap='deleteOne'>删除</view>
+    </view>
+  </view>
+
+
+  
+</view>
+
+  <image class='carImage' src="../../image/empty_shopping_cart.png" wx:else ></image>

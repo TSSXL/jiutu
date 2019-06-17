@@ -1,0 +1,25 @@
+<view class='add'>
+<text class='a' bindtap='addAddress'>新增</text>
+<view class='content'>
+
+<block wx:for="{{list}}" wx:key="list.id" wx:for-item="item" wx:for-index="index" >
+<view class='addItem' style="margin-top:{{index>0?'20rpx':''}}">
+<view class='one'>
+<text class='oneLeft'>{{item.Name}}</text>
+<text class='oneRight'>{{item.Phone}}</text>
+</view>
+<text class='dz'> {{item.Province}}{{item.City}}{{item.Region}}{{item.Address}}</text>
+</view>
+<view class='four'>
+  <image class='img' src="../../image/set_default@3x.png" wx:if="{{item.IsDefault===true}}"></image>
+    <image class='img' src="../../image/not_set_default@3x.png" data-id="{{item.ID}}" bindtap='setDefault' wx:else></image>
+  <text class='sz'>设为默认地址</text>
+  <view class='sj'>
+  <text data-item="{{item}}" bindtap='updateAddress'>编辑</text>
+   <text data-id="{{item.ID}}" bindtap='delAddress'>删除</text>
+  </view>
+</view>
+</block>
+
+</view>
+</view>

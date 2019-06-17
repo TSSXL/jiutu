@@ -1,0 +1,38 @@
+<view class='orderInfo'>
+
+<view class='info'>
+<view class='first'>
+<text>收货人：{{info.Consignee.Name}}</text>
+<text class='phone'>{{info.Consignee.Phone}}</text>
+</view>
+<view class='second'>
+<image class='leftImg' src="../../image/icon_address@3x.png" ></image>
+</view>
+<view class='add'>
+收货地址：{{info.Consignee.Address}}
+</view>
+</view>
+
+
+<view class='title'>
+{{info.BuinessName}}
+</view>
+<block wx:for="{{info.Products}}" wx:key="item.ID">
+<view class='content'>
+<image src="{{item.Image}}"></image>
+
+ <view class='xx'>
+ <text class='xOne'>{{item.Name}}</text>
+ <text class='xTwo'>{{item.Describe}}</text>
+ </view>
+
+ <view class='num'>
+ <text class='xOne'>￥{{item.Price}}</text>
+ <text class='xTwo'>x{{item.Quantity}}</text>
+ <text class='btn' data-image="{{item.Image}}" data-size="{{item.Describe}}" data-name="{{item.Name}}" data-productid="{{item.ID}}" bindtap='gotoTk' wx:if="{{item.Type>-1}}">退款</text>
+ </view>
+
+</view>
+</block>
+
+</view>

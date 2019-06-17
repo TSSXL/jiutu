@@ -1,0 +1,35 @@
+<view class='con'>
+<block wx:for="{{list}}" wx:key="item.ID" >
+<view class='item'>
+<view class='one' data-item="{{item}}" bindtap='gotoTkXq'>
+<image src="../../image/refund_store@3x.png"></image>
+<text>{{item.BusinessName}}</text>
+<image src="../../image/check_arrow@3x.png"></image>
+</view>
+
+<view class='two'>
+<image src="{{item.Image}}"></image>
+<view class='ce'>
+<text class='name'>{{item.ProductName}}</text>
+<text class='size'>{{item.SpecName}}</text>
+</view>
+</view>
+<view class='three'>
+<text class='time'>{{item.left}}</text>
+ <view class='rightBtn'>
+ <text class='lx' bindtap='lxSales'>联系卖家</text>
+ <text class='lx' wx:if="{{item.Status===3}}">申请仲裁</text>
+ <text class='show' data-item="{{item}}" bindtap='gotoTkXq'>查看详情</text>
+ </view>
+</view>
+</view>
+</block>
+</view>
+
+<view class='con' wx:if="{{list.length===0}}" style="padding-bottom:550rpx;">
+
+<image class='aImg' src="../../image/empty_orders@3x.png" ></image>
+</view>
+
+
+

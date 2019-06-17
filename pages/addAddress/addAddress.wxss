@@ -1,0 +1,54 @@
+.addAddress{
+  width:100%;
+  font-size: 62.5%;
+}
+.bc{
+  display: block;
+  width:100%;
+  height:50rpx;
+  background-color: #86C166;
+  color:white;
+  text-align: center;
+  text-indent: 75%;
+  font-weight: bold;
+}
+.name{
+  width:100%;
+  height:110rpx;
+  border-bottom: 1px solid rgb(240, 225, 225);
+   padding-left: 5%;
+}
+.name input{
+  width:100%;
+  height:100%;
+  line-height: 55px;
+    font-size: 1.3em;
+    color:rgb(151, 138, 138);
+    letter-spacing:1.5px;  
+}
+.dz{
+  width:100%;
+  padding-top: 15px;
+}
+.dz textarea{
+  width:100%;
+  height:240rpx;
+    color:rgb(151, 138, 138);
+  font-size: 1.3em;
+    letter-spacing:1.5px;  
+    padding-left: 5%;
+      border-bottom: 1px solid rgb(240, 225, 225);
+}
+.t{
+  padding-top: 10px;
+}
+.section__title{
+  width:100%;
+  height:50%;
+  font-size: 1.3em;
+  color:#262626;
+}
+.picker{
+  font-size: 1.2em;
+  color:#262626;
+}

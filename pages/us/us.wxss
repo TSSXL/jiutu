@@ -1,0 +1,20 @@
+.us{
+  width:100%;
+  font-size: 62.5%;
+}
+.us image{
+  width:50%;
+  height:370rpx;
+  margin-left: 25%;
+  margin-top: 60rpx;
+}
+.text{
+  width:90%;
+  margin-left: 5%;
+  font-size: 1.1em;
+  line-height: 50rpx;
+  text-indent: 1rem;
+  color:#262626;
+  font-family: FZLTHK--GBK1-0;
+                        
+}

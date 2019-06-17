@@ -1,0 +1,118 @@
+<view class='jlCon'>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='item'>
+<text>出发城市</text>
+ <picker
+    mode="region"
+    bindchange="choseStartCity"
+    value="{{startCity}}"
+    custom-item="{{customItem}}"
+    name="City"
+  >
+    <view class="picker">
+      出发城市:{{startCity[1]}}
+    </view>
+    <image src="../../image/enter_arrow@3x.png"></image>
+  </picker>
+</view>
+
+<view class='item'>
+<text>目的地</text>
+ <picker
+    mode="region"
+    bindchange="choseEndCity"
+    value="{{endCity}}"
+    custom-item="{{customItem}}"
+    name="DestinationCity"
+  >
+    <view class="picker">
+      选择目的地:{{endCity[1]}}
+    </view>
+    <image src="../../image/enter_arrow@3x.png"></image>
+  </picker>
+</view>
+
+<view class='item'>
+<text>人数</text>
+<input name="ParticipantNum" placeholder='　请输入人数'  ></input>
+</view>
+
+
+<view class='item'>
+<text>启程日期</text>
+ <picker
+    mode="date"
+    bindchange="choseStartTime"
+    value="{{startTime}}"
+    custom-item="{{customItem}}"
+    name="Start"
+  >
+    <view class="picker">
+      启程日期:{{startTime}}
+    </view>
+    <image src="../../image/down_arrow@2x.png"></image>
+  </picker>
+</view>
+
+
+<view class='item'>
+<text>结束日期</text>
+ <picker
+    mode="date"
+    bindchange="choseEndTime"
+    value="{{endTime}}"
+    custom-item="{{customItem}}"
+    name="End"
+  >
+    <view class="picker">
+      结束日期:{{endTime}}
+    </view>
+    <image src="../../image/down_arrow@2x.png"></image>
+  </picker>
+</view>
+
+
+<view class='item'>
+<text>费用</text>
+<input name="Fee" placeholder='输入人均费用' ></input>
+</view>
+
+<view class='item'>
+<text>电话</text>
+<input name="PublisherPhone" placeholder='输入联系电话'></input>
+</view>
+
+
+<view class='item'>
+<text>行程计划</text>
+<text class='xz'>{{num}}/500字</text>
+</view>
+
+<view class='e'>
+<textarea name="TripPlan" placeholder='请输入行程计划' bindinput='showNum'>
+</textarea>
+</view>
+
+<view class='item m'>
+<text>目的地图片</text>
+<text class='xz' bindtap='uploadImg'>上传图片</text>
+</view>
+
+<view class='upload'>
+<block wx:for="{{images}}" wx:key="item">
+<image src="{{'http://jznj.nbxuanma.com/'+item}}" ></image>
+</block>
+</view>
+<view class='twoBtn'>
+<button class='btn b' form-type="submit">
+保存
+</button>
+<button class='btn' form-type="reset">
+重置
+</button>
+</view>
+
+</form>
+
+
+</view>

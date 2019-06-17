@@ -1,0 +1,210 @@
+<view class='commu' style="padding-bottom:{{a==2?'120rpx':''}};background-color:{{a==3?'white':'#f7f7f7'}}">
+<!-- 攻略 -->
+<view  wx:if="{{a===1}}">
+
+<!-- 头部 -->
+<view class='headCon'>
+<image src="../../image/strategy_positioning@3x.png" bindtap='gotoCitys'></image>
+<text>{{city}}</text>
+</view>
+
+<!-- 轮播图 -->
+<view class='image'>
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{imgUrls}}" wx:key="item.ID">
+    <swiper-item>
+      <image class='swiperImage' src="{{item.Image}}" data-id="{{item.ID}}" bindtap='gotoGl' wx:if="{{item.Type===0}}" />
+      <video  class='swiperImage'  src="{{item.Video}}"   data-id="{{item.ID}}" bindtap='gotoGl' autoplay='true' wx:else></video>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<!-- 特色攻略 -->
+<view class='ts'>
+<text class='title'>特色攻略</text>
+<view class='tsItem'>
+ <block wx:for="{{info.Recommends}}" wx:key="item.ID">
+<view class='one' data-id="{{item.ID}}" bindtap='gotoGl'>
+ <image src="{{item.Image}}" ></image>
+ <text>{{item.Title}}</text>
+</view>
+ </block>
+</view>
+</view>
+
+<text class='all'>全部攻略</text>
+
+<view class='allCon'>
+<block wx:for="{{info.All}}" wx:key="item.ID">
+<view class='allItem' data-ID="{{item.ID}}" bindtap='gotoCommuXq'>
+ <text class='nb'>{{item.Title}}</text>
+ <view class='people'>
+  <image src="{{item.Avatar}}"></image>
+  <text>{{item.NickName}}</text>
+ </view>
+ <view class='allImage'>
+ <block wx:for="{{item.Images}}"  wx:for-item="j" wx:key="j">
+  <image src="{{j}}"></image>
+         </block>
+ </view>
+ <view class='last'>
+ <text class='time'>{{item.PublishTime}}</text>
+ <text  class='c'>{{item.CityName}}</text>
+ </view>
+</view>
+</block>
+</view>
+</view>
+
+
+<!-- 周边 -->
+<view wx:elif="{{a===2}}">
+ <!-- 周边导航栏  -->
+<view class='zbCon'>
+<text class='gl'  style="color:{{b===0?'#86C166':''}}" bindtap='showGl'>攻略</text>
+<text style="color:{{b===0?'':'#86C166'}}" bindtap='showQz'>求助</text> 
+</view>
+
+<!-- 周边攻略 -->
+<view wx:if="{{b===0}}">
+<block wx:for="{{zbInfo}}" wx:key="item.ID">
+<view class='zbc' data-ID="{{item.ID}}" bindtap='gotoCommuXq'>
+ <view class='zbT'>
+ <text class='z'>{{item.Title}}</text>
+ <text class='zbTime'>{{item.PublishTime}}</text>
+ </view>
+ <view class='zbInfo'>
+ <image src="{{item.Avatar}}"></image>
+ <text>{{item.NickName}}</text>
+ </view>
+ <text class='nr'>{{item.Content}}</text>
+ <view class='zbImg'>
+ <block wx:for="{{item.Images}}" wx:key="item">
+ <image src="{{item}}"></image>
+   </block>
+ </view>
+</view>
+</block>
+</view>
+
+<!-- 周边求助 -->
+<view wx:else>
+<block wx:for="{{qzInfo}}" wx:for-item="i" wx:key="i.ID">
+ <view class='qzCon' data-id="{{i.ID}}" bindtap='gotoQzXq'>
+  <view class='qzTitle'>
+  <text class='fm'>{{i.Title}}</text>
+  <view class='ren'>
+  <text class='dt'>{{i.NickName}}:</text>
+   <text class='lx'>{{i.Content}}</text>
+  </view>
+  <view class='qzImg'>
+  <block wx:for="{{i.Images}}" wx:key="item">
+  <image src="{{item}}"></image>
+      </block>
+  </view>
+  <view class='f'>
+  <image src="{{i.Avatar}}"></image>
+  <text>{{i.NickName}}</text>
+  <text class='qzTime'>{{i.CreateTime}}</text>
+  <view class='qzRight'>
+  <image src="../../image/icon_comments@3x.png"></image>
+  <text>{{i.CommentCount}}</text>
+  </view>
+  </view>
+  </view>
+ </view>
+</block>
+</view> 
+</view>
+
+
+
+
+<!-- 发布 -->
+  <view wx:elif="{{a===3}}">
+ <view class='threeImg'>
+ <image src="../../image/release_jijieling@2x.png" bindtap='writeJ'></image>
+ <image src="../../image/release_strategy@2x.png" bindtap='writeG'></image>
+ <image src="../../image/release_help@2x.png" bindtap='writeQ'></image>
+</view>
+</view>
+
+
+<!-- 行程 -->
+<view wx:elif="{{a===4}}">
+<view class='xcCon'>
+<block wx:for="{{xcInfo}}" wx:key="item.ID">
+<view class='xcItem' data-id="{{item.ID}}" bindtap='gotoXcXq'>
+<view class='xcOne'>
+<image src="{{item.Avatar}}"></image>
+<text class='xcName'>{{item.NickName}}</text>
+<text class='xcCity'>{{item.City}}</text>
+</view>
+<view class='xcTwo'>
+<image src="{{item.Image}}"></image>
+<view class='xcTwoRight'>
+<text class='xcTitle'>{{item.City}}→{{item.DestinationCity}}</text>
+<text class='xcContent'>{{item.TripPlan}}</text>
+<text class='xcNum'>人数:{{item.Join}}</text>
+<text class='xcNum'>日期:{{item.Span}}</text>
+</view>
+</view>
+</view>
+
+</block>
+</view>
+</view>
+
+<!-- 我的 -->
+<view wx:else>
+ <view class='threeImg'>
+ <image src="../../image/my_release_jijieling@3x.png" bindtap='gotoMyJ'></image>
+  <image src="../../image/my_join_jijieling@3x.png" bindtap='gotoMyJoin'></image>
+ <image src="../../image/my_strategy@3x.png" bindtap='gotoMyStrate'></image>
+ <image src="../../image/my_help@3x.png" bindtap='gotoMyHelp'></image>
+</view>
+</view>  
+
+
+
+
+
+
+<!-- 底部导航栏 -->
+<view class='foot'>
+ <view class='first'>
+ <image src='../../image/strategy@3x.png' bindtap='one' wx:if="{{showOne}}"></image>
+  <image src='../../image/strategy_selected@3x.png' bindtap='one' wx:else></image>
+  <text style="color:{{showOne===false?'#86C166':''}}">攻略</text>
+ </view>
+
+  <view class='first'>
+  <image src='../../image/surrounding@3x.png' bindtap='two' wx:if="{{showTwo}}" ></image>
+ <image src='../../image/surrounding_selected@3x.png' bindtap='two' wx:else></image>
+  <text style="color:{{showTwo===false?'#86C166':''}}">周边</text>
+ </view>
+
+  <view class='first'>
+   <image class='big' src='../../image/release@3x.png' bindtap='three'></image>
+ </view>
+
+ <view class='first'>
+   <image src='../../image/trip@3x.png' bindtap='four' wx:if="{{showFour}}"></image>
+      <image src='../../image/trip_selected@3x.png' bindtap='four' wx:else></image>  
+      <text style="color:{{showFour===false?'#86C166':''}}">行程</text>
+ </view>
+
+  <view class='first'>
+   <image src='../../image/my@3x.png' bindtap='five' wx:if="{{showFive}}"></image>
+      <image src='../../image/my_selected@3x.png' bindtap='five' wx:else></image>
+        <text style="color:{{showFive===false?'#86C166':''}}">我的</text>
+ </view>
+</view> 
+
+</view>

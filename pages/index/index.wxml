@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <image class='bg' src='../../image/login_bg.png'></image>
+  <view class="userinfo">
+  <image class="jt" src="../../image/login_logo@3x.png"></image>
+  </view>
+
+  <view class="usermotto">
+  <view class='num'>
+  <image src='../../image/phone.png'></image>
+  <input type="number" bindinput='inputNum' placeholder="请输入手机号码"></input>
+  </view>
+  <view class='num'>
+  <image src="../../image/verification_code.png"></image>
+  <input type="number" bindinput='inputPsd' placeholder="请输入验证码"></input>
+  <button bindtap='getYzm'>验证码</button>
+  </view>
+  <button class='login' bindtap='login'>登录</button>
+  <view class='read'>
+  <checkbox-group bindchange="a">
+    <checkbox checked='{{isChecked}}'></checkbox>
+  </checkbox-group>
+  <text class='my'>我已阅读并同意</text>
+  <text class='yh'>《用户协议》</text>
+  </view>
+  </view>
+
+
+
+
+</view>
+  <modal title="微信授权" confirm-text="登录" cancel-text="拒绝授权" hidden="{{modalHidden}}" bindconfirm="confirm" bindcancel="cancle">
+  <view class='modal'>
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</modal>

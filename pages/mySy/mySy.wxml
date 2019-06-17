@@ -1,0 +1,31 @@
+<view class='syCon'>
+<view class='tab'>
+<text bindtap='sc'>市场管家</text>
+<text bindtap='xm'>项目管家</text>
+<text bindtap='br'>本人消费</text>
+</view>
+<view class='header'>
+<image src="{{src}}"></image>
+<text class='firstText'>{{text}}</text>
+<text>￥{{list.Total}}</text>
+</view>
+
+<block wx:for="{{list.Data}}" wx:key="item.name">
+<view class='one'>
+<view class='left'>
+<text class='name'>{{item.Title}}</text>
+<text class='sz'>{{item.Ignore}}</text>
+<text class='sz'>{{item.CreateTime}}</text>
+</view>
+<view class='right'>
+<text class='money'>￥{{item.FromMoney}}</text>
+<view class='a'>
+<image src="{{image}}"></image>
+<text>￥{{item.Money}}</text>
+</view>
+</view>
+
+</view>
+</block>
+
+</view>

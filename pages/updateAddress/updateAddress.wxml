@@ -1,0 +1,28 @@
+<view class='updateCon'>
+<text class='bc' bindtap='update'>保存</text>
+
+<view class='name'>
+<input value='{{name}}' bindinput='getName'></input>
+ 
+</view>
+<view class='name'>
+<input value='{{phone}}' bindinput='getPhone'></input>
+
+</view>
+<view class='name t'>
+  <picker
+    mode="region"
+    bindchange="bindRegionChange"
+    value="{{regionT}}"
+  >
+    <view class="picker">
+      {{regionT[0]}}，{{regionT[1]}}，{{regionT[2]}}
+    </view>
+  </picker>
+</view>
+<view class='dz'>
+<textarea value='{{address}}' bindinput='getAddress'></textarea>
+
+</view>
+
+</view>

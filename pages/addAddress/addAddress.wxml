@@ -1,0 +1,25 @@
+<view class='addAddress'>
+<text class='bc' bindtap='bc'>保存</text>
+<view class='name'>
+ <input placeholder='收货人姓名' bindinput='getName'></input>
+</view>
+<view class='name'>
+ <input placeholder='手机号码' bindinput='getPhone'></input>
+</view>
+<view class='name t'>
+<view class="section__title">省、市、区</view>
+  <picker
+    mode="region"
+    bindchange="bindRegionChange"
+    value="{{region}}"
+    custom-item="{{customItem}}"
+  >
+    <view class="picker">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+</view>
+<view class='dz'>
+<textarea placeholder='详细地址' bindinput='getAddress'></textarea>
+</view>
+</view>

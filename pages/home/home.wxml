@@ -1,0 +1,58 @@
+<view class="home">
+<view class='image'>
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{imgUrls}}" wx:key="item.ID">
+    <swiper-item>
+      <image class='swiperImage' src="{{item.Image}}" data-id="{{item.ID}}" bindtap='gotoInfo'/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<!-- 输入框 -->
+<view class='head'>
+ <text  bindtap='gotoSearch'>请输入您要搜索的商品/品牌</text>
+ <image src="../../image/message@2x.png" bindtap='gotoMessage'></image>
+</view>
+<!-- 户外召集令 -->
+<view class='hw'>
+  <image src='../../image/home_jijieling@2x.png'  bindtap='goCommunity'></image>
+</view>
+<view class='size'>
+<view class='wz'>
+<text>品牌推荐</text>
+<text class='wzRight' bindtap='gotoMore'>MORE ></text>
+</view>
+<view class='info'>
+  <block wx:for='{{buinessRecommend}}' wx:for-item='j' wx:key="j.ID">
+   <image class='ppImage' src="{{j.Image}}"  data-id='{{j.ID}}' data-name="{{j.BuinessName}}" bindtap='gotoShop'></image>
+  </block>
+</view>
+</view>
+<view class='recommendGoods'>
+<image class='recommendImage' src='../../image/recommended_title@2x.png'></image>
+<view class='goods'>
+<block wx:for="{{productList}}" wx:for-item="i" wx:key='i.ID'>
+ <view class='goodsInfo' data-id="{{i.ID}}" bindtap='gotoInfo'>
+ <image src='{{i.Image}}' ></image>
+ <view class='goodsXq'>
+  <text class='title'>{{i.Name}}</text>
+  <view class='goodsNum'>
+  <text class='price'>￥{{i.Price}}</text>
+  <view class='rightInfo'>
+  <text class='saleNum'>{{i.Point}}</text>
+  <image src='../../image/jiutu_points@2x.png'></image>
+  </view>
+   </view>
+ </view>
+ </view>
+</block>
+</view>
+</view>
+
+<image class='top' src="../../image/placed_top@3x.png" bindtap='goTop'></image>
+</view>
